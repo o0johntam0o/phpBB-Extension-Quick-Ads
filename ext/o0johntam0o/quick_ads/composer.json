@@ -1,0 +1,24 @@
+{
+	"name": "o0johntam0o/quick_ads",
+	"type": "phpbb-extension",
+	"description": "Append any Ads, HTML, jQuery/JS code into your forum quickly. Very simple and useful.",
+	"homepage": "https://github.com/o0johntam0o/phpBB-Extension-Quick-Ads",
+	"version": "1.0.0",
+	"time": "2014-06-19",
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Huynh Buu Tam",
+			"email": "o0johntam0o@gmail.com",
+			"homepage": "",
+			"role": "Lead Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.3.3",
+		"phpbb/phpbb": "3.1.*@dev"
+	},
+	"extra": {
+		"display-name": "Quick Ads"
+	}
+}
