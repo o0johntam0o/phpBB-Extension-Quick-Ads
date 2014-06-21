@@ -14,7 +14,7 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, array(
-	'QUICK_ADS_TITLE_ACP'				=> 'Quick Ads',
+	'QUICK_ADS_TITLE_ACP'				=> 'Quick Ads Extension',
 	'QUICK_ADS_TITLE1'					=> 'General Settings',
 	'QUICK_ADS_TITLE2'					=> 'Details Settings',
 	
@@ -56,10 +56,9 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_ONPAGE_ITEM_VIEWFORUM'	=> 'Xem chuyên mục',
 	'QUICK_ADS_ONPAGE_ITEM_VIEWONLINE'	=> 'Xem thành viên trực tuyến',
 	'QUICK_ADS_ONPAGE_ITEM_VIEWTOPIC'	=> 'Xem chủ đề',
-	/* Custom pages
-	'QUICK_ADS_ONPAGE_ITEM_PORTAL'		=> 'Cổng thông tin',
-	'QUICK_ADS_ONPAGE_ITEM_GALLERY'		=> 'Thư viện ảnh',
-	Custom pages */
+	// Custom pages
+	// 'QUICK_ADS_ONPAGE_ITEM_YOUR_STUFF'	=> 'Phần của bạn',
+	// Custom pages
 	
 	'QUICK_ADS_GROUP'					=> 'Cấp phép nhóm',
 	'QUICK_ADS_GROUP_EXPLAIN'			=> 'Nhóm nào có thể thấy Ads này',

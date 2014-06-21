@@ -14,7 +14,7 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, array(
-	'QUICK_ADS_TITLE_ACP'				=> 'Quick Ads',
+	'QUICK_ADS_TITLE_ACP'				=> 'Quick Ads Extension',
 	'QUICK_ADS_TITLE1'					=> 'General Settings',
 	'QUICK_ADS_TITLE2'					=> 'Details Settings',
 	
@@ -56,10 +56,9 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_ONPAGE_ITEM_VIEWFORUM'	=> 'View forum',
 	'QUICK_ADS_ONPAGE_ITEM_VIEWONLINE'	=> 'View online',
 	'QUICK_ADS_ONPAGE_ITEM_VIEWTOPIC'	=> 'View topic',
-	/* Custom pages
-	'QUICK_ADS_ONPAGE_ITEM_PORTAL'		=> 'Portal',
-	'QUICK_ADS_ONPAGE_ITEM_GALLERY'		=> 'Gallery',
-	Custom pages */
+	// Custom pages
+	// 'QUICK_ADS_ONPAGE_ITEM_YOUR_STUFF'	=> 'Your stuff',
+	// Custom pages
 	
 	'QUICK_ADS_GROUP'					=> 'Group permission',
 	'QUICK_ADS_GROUP_EXPLAIN'			=> 'Which group can see this Ads',
@@ -94,7 +93,7 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_PRIORITY'				=> 'Priority (Integer)',
 	'QUICK_ADS_PRIORITY_EXPLAIN'		=> 'The <strong>lower</strong> number, the <strong>higher</strong> priority',
 
-	'QUICK_ADS_ADD_FIELD'				=> 'Add more Ads',
+	'QUICK_ADS_ADD_FIELD'				=> 'New Ads',
 	'QUICK_ADS_ADD_FIELD_NAME'			=> 'Ads name',
 	'QUICK_ADS_DEL_FIELD'				=> 'Delete this Ads',
 	'QUICK_ADS_DEL_FIELD_EXPLAIN'		=> '<strong style="color:#ff0000">Note: this action can not be undo</strong>',

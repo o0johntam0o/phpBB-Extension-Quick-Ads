@@ -17,15 +17,11 @@ class main_module
 	function main($id, $mode)
 	{
 		global $user, $template, $config;
+		global $request, $phpbb_log;
 		
-		if ($mode == 'details')
+		if ($mode == 'quick_ads_config_details')
 		{
 			global $db, $table_prefix;
-		}
-
-		if (!function_exists('quick_ads_rebuild_select'))
-		{
-			include($phpbb_root_path . 'includes/functions_quick_ads.' . $phpEx);
 		}
 		
 		$this->tpl_name = 'acp_quick_ads';
@@ -39,7 +35,7 @@ class main_module
 				trigger_error('FORM_INVALID');
 			}
 			// **************** INPUT **************** //
-			if ($mode == 'index')
+			if ($mode == 'quick_ads_config')
 			{
 				$config->set('quick_ads_enable', $request->variable('quick_ads_enable', 0));
 				$config->set('quick_ads_custom_id', $request->variable('quick_ads_custom_id', ''));
@@ -57,7 +53,7 @@ class main_module
 				$config->set('quick_ads_wmin_bottom', ($request->variable('quick_ads_wmin_bottom', 0) < 0) ? 0 : $request->variable('quick_ads_wmin_bottom', 0));
 				$config->set('quick_ads_hmin_bottom', ($request->variable('quick_ads_hmin_bottom', 0) < 0) ? 0 : $request->variable('quick_ads_hmin_bottom', 0));
 			}
-			else if ($mode == 'details')
+			else if ($mode == 'quick_ads_config_details')
 			{
 				$quick_ads_sql = 'SELECT ads_id FROM ' . $table_prefix . 'quick_ads';
 				$result = $db->sql_query($quick_ads_sql);
@@ -75,7 +71,69 @@ class main_module
 						
 						foreach ($ads_onpage_arr as $key => $value)
 						{
-							$ads_onpage_sql .= quick_ads_rebuild_select('onpage', $value) . ',';
+							// -----------------------------------
+							$value = (int) $value;
+							
+							switch ($value)
+							{
+								case 0:
+									$value = 'NULL';
+								break;
+								
+								case 1:
+									$value = 'faq';
+								break;
+								
+								case 2:
+									$value = 'index';
+								break;
+								
+								case 3:
+									$value = 'mcp';
+								break;
+								
+								case 4:
+									$value = 'memberlist';
+								break;
+								
+								case 5:
+									$value = 'posting';
+								break;
+								
+								case 6:
+									$value = 'report';
+								break;
+								
+								case 7:
+									$value = 'search';
+								break;
+								
+								case 8:
+									$value = 'ucp';
+								break;
+								
+								case 9:
+									$value = 'viewforum';
+								break;
+								
+								case 10:
+									$value = 'viewonline';
+								break;
+								
+								case 11:
+									$value = 'viewtopic';
+								break;
+								// === Custom pages ===
+								// case 12:
+								//	$value = 'your_stuff';
+								// break;
+								// === Custom pages ===
+								default:
+									$value = 'NULL';
+								break;
+							}
+							// -------------------------------------
+							$ads_onpage_sql .= $value . ',';
 						}
 						
 						$ads_onpage_arr = $ads_onpage_sql . 'NULL';
@@ -114,7 +172,7 @@ class main_module
 			$phpbb_log->add('admin', $user->data['user_id'], $user->ip, 'QUICK_ADS_LOG_MSG');
 			trigger_error($user->lang['QUICK_ADS_SAVED'] . adm_back_link($this->u_action));
 		}
-		else if ($request->is_set_post('add_field') && $mode == 'details')
+		else if ($request->is_set_post('add_field') && $mode == 'quick_ads_config_details')
 		{
 			if (!check_form_key('o0johntam0o/acp_quick_ads'))
 			{
@@ -129,7 +187,7 @@ class main_module
 			trigger_error($user->lang['QUICK_ADS_SAVED'] . adm_back_link($this->u_action));
 		}
 		// **************** OUTPUT **************** //
-		if ($mode == 'index')
+		if ($mode == 'quick_ads_config')
 		{
 			$template->assign_vars(array(
 				'S_QUICK_ADS_ACP_INDEX'		=> true,
@@ -150,7 +208,7 @@ class main_module
 				'S_QUICK_ADS_HMIN_BOTTOM'	=> isset($config['quick_ads_hmin_bottom']) ? $config['quick_ads_hmin_bottom'] : 0,
 			));
 		}
-		else if ($mode == 'details')
+		else if ($mode == 'quick_ads_config_details')
 		{
 			// Fetch group items
 			$group_sql = array(
@@ -187,10 +245,9 @@ class main_module
 					'QUICK_ADS_ONPAGE_VIEWFORUM'	=> in_array('viewforum', $ads_onpage_arr) ? 1 : 0,
 					'QUICK_ADS_ONPAGE_VIEWONLINE'	=> in_array('viewonline', $ads_onpage_arr) ? 1 : 0,
 					'QUICK_ADS_ONPAGE_VIEWTOPIC'	=> in_array('viewtopic', $ads_onpage_arr) ? 1 : 0,
-					/* Custom pages
-					'QUICK_ADS_ONPAGE_PORTAL'		=> in_array('portal', $ads_onpage_arr) ? 1 : 0,
-					'QUICK_ADS_ONPAGE_GALLERY'		=> in_array('gallery', $ads_onpage_arr) ? 1 : 0,
-					Custom pages */
+					// === Custom pages ===
+					// 'QUICK_ADS_ONPAGE_YOUR_STUFF'	=> in_array('your_stuff', $ads_onpage_arr) ? 1 : 0,
+					// === Custom pages ===
 					'QUICK_ADS_TEXT'				=> $row['ads_text'],
 					'QUICK_ADS_WIDTH'				=> $row['ads_width'],
 					'QUICK_ADS_HEIGHT'				=> $row['ads_height'],

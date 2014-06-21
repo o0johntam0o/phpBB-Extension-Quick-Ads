@@ -21,13 +21,12 @@ class release_1_0_0 extends \phpbb\db\migration\migration
     {
         return array('\phpbb\db\migration\data\v310\dev');
     }
-
-    public function update_data()
-    {
-        return array(
-			array('table.add', array(
-				'phpbb_quick_ads',
-				array(
+	
+	public function update_schema()
+	{
+		return array(
+			'add_tables'		=> array(
+				$this->table_prefix . 'quick_ads'	=> array(
 					'COLUMNS'		=> array(
 						'ads_id'			=> array('UINT', NULL, 'auto_increment'),
 						'ads_name'			=> array('VCHAR', 'Undefined'),
@@ -45,17 +44,24 @@ class release_1_0_0 extends \phpbb\db\migration\migration
 					),
 					'PRIMARY_KEY'	=> 'ads_id',
 				),
-			)),
-			
-			array('table.insert', array(
-				'phpbb_quick_ads',
-				array(
-					'ads_text'	=> 'Hello {S_USERNAME}',
-				),
-			)),
-			
+			),
+		);
+	}
+	
+	public function revert_schema()
+	{
+		return array(
+			'drop_tables'		=> array(
+				$this->table_prefix . 'quick_ads',
+			),
+		);
+	}
+	
+    public function update_data()
+    {
+        return array(
             array('config.add', array('quick_ads_version', '1.0.0')),
-            array('config.add', array('quick_ads_enable', 0)),
+            array('config.add', array('quick_ads_enable', 1)),
             array('config.add', array('quick_ads_custom_id', 'quick_ads_')),
             array('config.add', array('quick_ads_zindex', 100)),
             array('config.add', array('quick_ads_closebt', 1)),
@@ -81,7 +87,7 @@ class release_1_0_0 extends \phpbb\db\migration\migration
                 'QUICK_ADS_TITLE_ACP',
                 array(
                     'module_basename'   => '\o0johntam0o\quick_ads\acp\main_module',
-                    'modes'             => array('config_quick_ads'),
+                    'modes'             => array('quick_ads_config', 'quick_ads_config_details'),
                 ),
             )),
         );

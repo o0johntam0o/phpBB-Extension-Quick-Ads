@@ -1,0 +1,3 @@
+quick_ads_base_controller:
+    pattern: /quick_ads
+    defaults: { _controller: o0johntam0o.quick_ads.controller:base }

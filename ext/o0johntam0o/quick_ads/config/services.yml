@@ -1,0 +1,29 @@
+services:
+    o0johntam0o.quick_ads.controller:
+        class: o0johntam0o\quick_ads\controller\main
+        arguments:
+            - @controller.helper
+            - @template
+            #- @user
+            #- @config
+            #- @auth
+            #- @request
+            #- @dbal.conn
+            #- @passwords.manager
+            #- %core.root_path%
+            #- %core.php_ext%
+
+    o0johntam0o.quick_ads.listener:
+        class: o0johntam0o\quick_ads\event\main_listener
+        arguments:
+            - @controller.helper
+            - @template
+            - @user
+            - @config
+            - @request
+            - @dbal.conn
+            - %core.table_prefix%
+            - %core.root_path%
+            - %core.php_ext%
+        tags:
+            - { name: event.listener }

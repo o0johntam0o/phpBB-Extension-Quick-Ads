@@ -19,12 +19,12 @@ class main_info
 			'title'		=> 'QUICK_ADS_TITLE_ACP',
 			'version'	=> '1.0.0',
 			'modes'		=> array(
-				'index'	=> array(
+				'quick_ads_config'	=> array(
 					'title' => 'QUICK_ADS_TITLE1',
 					'auth' => 'acl_a_board',
 					'cat' => array('QUICK_ADS_TITLE1')
 				),
-				'details'	=> array(
+				'quick_ads_config_details'	=> array(
 					'title' => 'QUICK_ADS_TITLE2',
 					'auth' => 'acl_a_board',
 					'cat' => array('QUICK_ADS_TITLE2')
