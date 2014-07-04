@@ -157,6 +157,7 @@ class main_listener implements EventSubscriberInterface
 				'S_QUICK_ADS_LEFT'				=> ($left > 0) ? true : false,
 				'S_QUICK_ADS_RIGHT'				=> ($right > 0) ? true : false,
 				'S_QUICK_ADS_AVAILABLE'			=> isset($this->config['quick_ads_enable']) ? $this->config['quick_ads_enable'] : false,
+				'S_QUICK_ADS_ALLOW_BOT'			=> isset($this->config['quick_ads_allow_bot']) ? $this->config['quick_ads_allow_bot'] : false,
 				'S_QUICK_ADS_CUSTOM_ID'			=> isset($this->config['quick_ads_custom_id']) ? $this->config['quick_ads_custom_id'] : 'quick_ads_',
 				'S_QUICK_ADS_ZINDEX'			=> isset($this->config['quick_ads_zindex']) ? $this->config['quick_ads_zindex'] : 0,
 				'S_QUICK_ADS_CLOSEBT'			=> isset($this->config['quick_ads_closebt']) ? $this->config['quick_ads_closebt'] : false,

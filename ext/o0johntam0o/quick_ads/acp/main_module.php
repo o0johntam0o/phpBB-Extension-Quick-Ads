@@ -38,6 +38,7 @@ class main_module
 			if ($mode == 'quick_ads_config')
 			{
 				$config->set('quick_ads_enable', $request->variable('quick_ads_enable', 0));
+				$config->set('quick_ads_allow_bot', $request->variable('quick_ads_allow_bot', 0));
 				$config->set('quick_ads_custom_id', $request->variable('quick_ads_custom_id', ''));
 				$config->set('quick_ads_zindex', $request->variable('quick_ads_zindex', 100));
 				$config->set('quick_ads_closebt', $request->variable('quick_ads_closebt', 1));
@@ -192,6 +193,7 @@ class main_module
 			$template->assign_vars(array(
 				'S_QUICK_ADS_ACP_INDEX'		=> true,
 				'S_QUICK_ADS_ENABLE'		=> isset($config['quick_ads_enable']) ? $config['quick_ads_enable'] : false,
+				'S_QUICK_ADS_ALLOW_BOT'		=> isset($config['quick_ads_allow_bot']) ? $config['quick_ads_allow_bot'] : false,
 				'S_QUICK_ADS_CUSTOM_ID'		=> isset($config['quick_ads_custom_id']) ? $config['quick_ads_custom_id'] : '',
 				'S_QUICK_ADS_ZINDEX'		=> isset($config['quick_ads_zindex']) ? $config['quick_ads_zindex'] : 0,
 				'S_QUICK_ADS_CLOSEBT'		=> isset($config['quick_ads_closebt']) ? $config['quick_ads_closebt'] : false,

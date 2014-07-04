@@ -20,6 +20,8 @@ $lang = array_merge($lang, array(
 	
 	'QUICK_ADS_ENABLE'					=> 'Enable Quick Ads',
 	'QUICK_ADS_ENABLE_EXPLAIN'			=> 'If you don&#39;t enable this, the Quick Ads will not show anymore',
+	'QUICK_ADS_ALLOW_BOT'				=> 'Allow bots',
+	'QUICK_ADS_ALLOW_BOT_EXPLAIN'		=> 'Enable Quick Ads for bots',
 	'QUICK_ADS_CUSTOM_ID'				=> 'Custom ID',
 	'QUICK_ADS_CUSTOM_ID_EXPLAIN'		=> 'Use <em style="color:#ff0000">a-z</em>, <em style="color:#ff0000">0-9</em> and <em style="color:#ff0000">underline</em> only (Leave blank to use the default value). Example: my_custom_id_123',
 	'QUICK_ADS_ZINDEX'					=> 'Z-Index (Integer)',

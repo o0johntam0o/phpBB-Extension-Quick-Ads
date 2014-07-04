@@ -20,6 +20,8 @@ $lang = array_merge($lang, array(
 	
 	'QUICK_ADS_ENABLE'					=> 'Kích hoạt Quick Ads',
 	'QUICK_ADS_ENABLE_EXPLAIN'			=> 'Nếu bạn không kích hoạt nó, Quick Ads sẽ không hiện bất kỳ giá nào',
+	'QUICK_ADS_ALLOW_BOT'				=> 'Cho phép máy tìm kiếm',
+	'QUICK_ADS_ALLOW_BOT_EXPLAIN'		=> 'Kích hoạt Quick Ads cho các máy tìm kiếm',
 	'QUICK_ADS_CUSTOM_ID'				=> 'Tùy biến ID',
 	'QUICK_ADS_CUSTOM_ID_EXPLAIN'		=> 'Chỉ được sử dụng <em style="color:#ff0000">a-z</em>, <em style="color:#ff0000">0-9</em> và <em style="color:#ff0000">dấu gạch chân</em> (Bỏ trống để sử dụng giá trị mặc định). Ví dụ: my_custom_id_123',
 	'QUICK_ADS_ZINDEX'					=> 'Z-Index (Dạng số nguyên)',

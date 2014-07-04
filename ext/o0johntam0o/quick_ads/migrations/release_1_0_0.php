@@ -62,6 +62,7 @@ class release_1_0_0 extends \phpbb\db\migration\migration
         return array(
             array('config.add', array('quick_ads_version', '1.0.0')),
             array('config.add', array('quick_ads_enable', 1)),
+            array('config.add', array('quick_ads_allow_bot', 0)),
             array('config.add', array('quick_ads_custom_id', 'quick_ads_')),
             array('config.add', array('quick_ads_zindex', 100)),
             array('config.add', array('quick_ads_closebt', 1)),
