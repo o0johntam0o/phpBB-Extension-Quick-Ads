@@ -14,9 +14,9 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, array(
-	'QUICK_ADS_TITLE_ACP'				=> 'Quick Ads Extension',
-	'QUICK_ADS_TITLE1'					=> 'General Settings',
-	'QUICK_ADS_TITLE2'					=> 'Details Settings',
+	'QUICK_ADS_TITLE'					=> 'Quick Ads Extension',
+	'QUICK_ADS_TITLE_SETTINGS1'			=> 'Cài đặt tổng quát',
+	'QUICK_ADS_TITLE_SETTINGS2'			=> 'Cài đặt chi tiết',
 	
 	'QUICK_ADS_ENABLE'					=> 'Kích hoạt Quick Ads',
 	'QUICK_ADS_ENABLE_EXPLAIN'			=> 'Nếu bạn không kích hoạt nó, Quick Ads sẽ không hiện bất kỳ giá nào',

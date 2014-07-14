@@ -80,12 +80,12 @@ class release_1_0_0 extends \phpbb\db\migration\migration
             array('module.add', array(
                 'acp',
                 'ACP_CAT_DOT_MODS',
-                'QUICK_ADS_TITLE_ACP'
+                'QUICK_ADS_TITLE'
             )),
 			
             array('module.add', array(
                 'acp',
-                'QUICK_ADS_TITLE_ACP',
+                'QUICK_ADS_TITLE',
                 array(
                     'module_basename'   => '\o0johntam0o\quick_ads\acp\main_module',
                     'modes'             => array('quick_ads_config', 'quick_ads_config_details'),

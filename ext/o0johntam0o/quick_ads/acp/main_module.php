@@ -25,7 +25,7 @@ class main_module
 		}
 		
 		$this->tpl_name = 'acp_quick_ads';
-		$this->page_title = $user->lang['QUICK_ADS_TITLE_ACP'];
+		$this->page_title = $user->lang['QUICK_ADS_TITLE'];
 		add_form_key('o0johntam0o/acp_quick_ads');
 
 		if ($request->is_set_post('submit'))

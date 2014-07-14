@@ -16,18 +16,18 @@ class main_info
 	{
 		return array(
 			'filename'	=> '\o0johntam0o\quick_ads\acp\main_module',
-			'title'		=> 'QUICK_ADS_TITLE_ACP',
+			'title'		=> 'QUICK_ADS_TITLE',
 			'version'	=> '1.0.0',
 			'modes'		=> array(
 				'quick_ads_config'	=> array(
-					'title' => 'QUICK_ADS_TITLE1',
+					'title' => 'QUICK_ADS_TITLE_SETTINGS1',
 					'auth' => 'acl_a_board',
-					'cat' => array('QUICK_ADS_TITLE1')
+					'cat' => array('QUICK_ADS_TITLE_SETTINGS1')
 				),
 				'quick_ads_config_details'	=> array(
-					'title' => 'QUICK_ADS_TITLE2',
+					'title' => 'QUICK_ADS_TITLE_SETTINGS2',
 					'auth' => 'acl_a_board',
-					'cat' => array('QUICK_ADS_TITLE2')
+					'cat' => array('QUICK_ADS_TITLE_SETTINGS2')
 				),
 			),
 		);

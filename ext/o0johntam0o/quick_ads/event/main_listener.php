@@ -22,7 +22,7 @@ class main_listener implements EventSubscriberInterface
 {
 	protected $helper, $template, $user, $config, $request, $db, $table_prefix, $root_path, $php_ext;
 	
-	public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template, \phpbb\user $user, \phpbb\config\config $config, \phpbb\request\request $request, \phpbb\db\driver\driver $db, $table_prefix, $root_path, $php_ext)
+	public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template, \phpbb\user $user, \phpbb\config\config $config, \phpbb\request\request $request, \phpbb\db\driver\driver_interface $db, $table_prefix, $root_path, $php_ext)
 	{
 		$this->helper = $helper;
 		$this->template = $template;
