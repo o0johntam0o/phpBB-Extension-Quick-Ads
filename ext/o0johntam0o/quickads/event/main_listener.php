@@ -8,7 +8,7 @@
 *
 */
 
-namespace o0johntam0o\quick_ads\event;
+namespace o0johntam0o\quickads\event;
 
 /**
 * @ignore
@@ -47,7 +47,7 @@ class main_listener implements EventSubscriberInterface
     {
         $lang_set_ext = $event['lang_set_ext'];
         $lang_set_ext[] = array(
-            'ext_name' => 'o0johntam0o/quick_ads',
+            'ext_name' => 'o0johntam0o/quickads',
             'lang_set' => 'quick_ads',
         );
         $event['lang_set_ext'] = $lang_set_ext;

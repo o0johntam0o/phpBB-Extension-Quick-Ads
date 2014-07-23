@@ -8,7 +8,7 @@
 *
 */
 
-namespace o0johntam0o\quick_ads\acp;
+namespace o0johntam0o\quickads\acp;
 
 class main_module
 {

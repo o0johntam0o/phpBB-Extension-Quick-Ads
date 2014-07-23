@@ -1,12 +1,12 @@
 services:
-    o0johntam0o.quick_ads.controller:
-        class: o0johntam0o\quick_ads\controller\main
+    o0johntam0o.quickads.controller:
+        class: o0johntam0o\quickads\controller\main
         arguments:
             - @controller.helper
             - @template
 
-    o0johntam0o.quick_ads.listener:
-        class: o0johntam0o\quick_ads\event\main_listener
+    o0johntam0o.quickads.listener:
+        class: o0johntam0o\quickads\event\main_listener
         arguments:
             - @controller.helper
             - @template

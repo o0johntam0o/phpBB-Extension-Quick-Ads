@@ -29,13 +29,11 @@ Quick Ads alows you to:
 
 ## Requirement
 
-php: >=5.3.3
-
-phpbb: 3.1.*@dev
+phpbb: 3.1.x
 
 ## Installation
 
-Copy ```./ext/o0johntam0o/quick-ads/*``` to ```<phpBB root>/ext/o0johntam0o/quick-ads/*```
+Copy ```./ext/o0johntam0o/quickads/*``` to ```<phpBB root>/ext/o0johntam0o/quickads/*```
 
 ## License
 

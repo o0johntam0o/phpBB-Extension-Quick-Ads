@@ -8,7 +8,7 @@
 *
 */
 
-namespace o0johntam0o\quick_ads\migrations;
+namespace o0johntam0o\quickads\migrations;
 
 class release_1_0_0 extends \phpbb\db\migration\migration
 {
@@ -87,7 +87,7 @@ class release_1_0_0 extends \phpbb\db\migration\migration
                 'acp',
                 'QUICK_ADS_TITLE',
                 array(
-                    'module_basename'   => '\o0johntam0o\quick_ads\acp\main_module',
+                    'module_basename'   => '\o0johntam0o\quickads\acp\main_module',
                     'modes'             => array('quick_ads_config', 'quick_ads_config_details'),
                 ),
             )),

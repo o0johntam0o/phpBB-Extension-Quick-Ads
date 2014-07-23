@@ -8,14 +8,14 @@
 *
 */
 
-namespace o0johntam0o\quick_ads\acp;
+namespace o0johntam0o\quickads\acp;
 
 class main_info
 {
 	function module()
 	{
 		return array(
-			'filename'	=> '\o0johntam0o\quick_ads\acp\main_module',
+			'filename'	=> '\o0johntam0o\quickads\acp\main_module',
 			'title'		=> 'QUICK_ADS_TITLE',
 			'version'	=> '1.0.0',
 			'modes'		=> array(

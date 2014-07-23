@@ -8,7 +8,7 @@
 *
 */
 
-namespace o0johntam0o\quick_ads\controller;
+namespace o0johntam0o\quickads\controller;
 
 class main
 {

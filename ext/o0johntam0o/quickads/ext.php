@@ -8,7 +8,7 @@
 *
 */
 
-namespace o0johntam0o\quick_ads;
+namespace o0johntam0o\quickads;
 
 /**
 * @ignore
