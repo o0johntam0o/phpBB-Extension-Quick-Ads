@@ -4,7 +4,7 @@
 	"description": "Append any Ads, HTML, jQuery/JS code into your forum quickly. Very simple and useful.",
 	"homepage": "https://github.com/o0johntam0o/phpBB-Extension-Quick-Ads",
 	"version": "1.0.0",
-	"time": "2014-06-19",
+	"keywords": ["o0johntam0o", "extension", "quickads"],
 	"license": "GPL-2.0",
 	"authors": [
 		{
@@ -15,12 +15,21 @@
 		}
 	],
 	"require": {
-		"php": ">=5.3.3"
+		"php": ">=5.3.3",
+		"composer/installers": "~1.0"
+	},
+	"require-dev": {
+		"phpbb/epv": "dev-master"
 	},
 	"extra": {
 		"display-name": "Quick Ads",
 		"soft-require": {
-			"phpbb/phpbb": "3.1.*@dev"
+			"phpbb/phpbb": ">=3.1.0,<3.2.*@dev"
+		},
+		"version-check": {
+			"host": "version.phpbb.com",
+			"directory": "/phpbb-extensions",
+			"filename": "quickads_versions.json"
 		}
 	}
 }

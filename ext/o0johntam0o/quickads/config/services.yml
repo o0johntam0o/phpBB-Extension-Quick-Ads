@@ -1,10 +1,4 @@
 services:
-    o0johntam0o.quickads.controller:
-        class: o0johntam0o\quickads\controller\main
-        arguments:
-            - @controller.helper
-            - @template
-
     o0johntam0o.quickads.listener:
         class: o0johntam0o\quickads\event\main_listener
         arguments:
@@ -19,3 +13,9 @@ services:
             - %core.php_ext%
         tags:
             - { name: event.listener }
+
+    o0johntam0o.quickads.controller:
+        class: o0johntam0o\quickads\controller\main
+        arguments:
+            - @controller.helper
+            - @template

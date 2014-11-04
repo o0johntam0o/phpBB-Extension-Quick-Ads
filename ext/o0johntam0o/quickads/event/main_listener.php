@@ -1,18 +1,15 @@
 <?php
-
 /**
 *
-* @package phpBB Extension - Quick Ads
+* Quick Ads extension for the phpBB Forum Software package
+*
 * @copyright (c) 2014 o0johntam0o
-* @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
+* @license GNU General Public License, version 2 (GPL-2.0)
 *
 */
 
 namespace o0johntam0o\quickads\event;
 
-/**
-* @ignore
-*/
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**

@@ -1,10 +1,10 @@
 <?php
-
 /**
 *
-* @package phpBB Extension - Quick Ads
+* Quick Ads extension for the phpBB Forum Software package
+*
 * @copyright (c) 2014 o0johntam0o
-* @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
+* @license GNU General Public License, version 2 (GPL-2.0)
 *
 */
 
@@ -17,7 +17,6 @@ class main_info
 		return array(
 			'filename'	=> '\o0johntam0o\quickads\acp\main_module',
 			'title'		=> 'QUICK_ADS_TITLE',
-			'version'	=> '1.0.0',
 			'modes'		=> array(
 				'quick_ads_config'	=> array(
 					'title' => 'QUICK_ADS_TITLE_SETTINGS1',
