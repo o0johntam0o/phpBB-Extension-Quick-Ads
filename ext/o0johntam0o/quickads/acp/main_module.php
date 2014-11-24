@@ -214,8 +214,16 @@ class main_module
 				trigger_error('FORM_INVALID');
 			}
 			
-			$quick_ads_name = $this->db->sql_escape(utf8_normalize_nfc($this->request->variable('quick_ads_add_new', '', true)));
-			$quick_ads_sql = 'INSERT INTO ' . $this->table_prefix . 'quick_ads(ads_text, ads_name) VALUES("","' . $quick_ads_name . '")';
+			$quick_ads_sql = array(
+				'ads_name'		=> utf8_normalize_nfc($this->request->variable('quick_ads_name_new', 'Undefined', true)),
+				'ads_pos'		=> $this->request->variable('quick_ads_pos_new', 2),
+				'ads_text'		=> utf8_normalize_nfc($this->request->variable('quick_ads_text_new', '', true)),
+				'ads_width'		=> ($this->request->variable('quick_ads_width_new', 50) < 0) ? 0 : $this->request->variable('quick_ads_width_new', 50),
+				'ads_height'	=> ($this->request->variable('quick_ads_height_new', 50) < 0) ? 0 : $this->request->variable('quick_ads_height_new', 50),
+				'ads_bg_color'	=> utf8_normalize_nfc($this->request->variable('quick_ads_bg_color_new', '#ffffff')),
+			);
+			$quick_ads_sql = 'INSERT INTO ' . $this->table_prefix . 'quick_ads ' . $this->db->sql_build_array('INSERT', $quick_ads_sql);
+			
 			$this->db->sql_query($quick_ads_sql);
 			
 			$this->log->add('admin', $this->user->data['user_id'], $this->user->ip, 'QUICK_ADS_LOG_MSG');

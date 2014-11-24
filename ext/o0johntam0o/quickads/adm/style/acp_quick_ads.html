@@ -95,9 +95,47 @@
 	</fieldset>
 <!-- ELSE --><!--// endif mode = index -->
 	<fieldset>
+		<legend>{L_QUICK_ADS_NEW_ADS}</legend>
+		<dl>
+			<dt><label for="quick_ads_name_new">{L_QUICK_ADS_NAME}:</label></dt>
+			<dd>
+				<input type="text" maxlength="30" size="20" name="quick_ads_name_new" value="{L_QUICK_ADS_NEW_ADS_NAME}" id="quick_ads_name_new" />
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="quick_ads_pos_new">{L_QUICK_ADS_POS}:</label></dt>
+			<dd>
+				<select name="quick_ads_pos_new" id="quick_ads_pos_new">
+					<option value="0" selected="selected">{L_DISABLE}</option>
+					<option value="1">{L_QUICK_ADS_TOP}</option>
+					<option value="2">{L_QUICK_ADS_BOTTOM}</option>
+					<option value="3">{L_QUICK_ADS_LEFT}</option>
+					<option value="4">{L_QUICK_ADS_RIGHT}</option>
+				</select>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="quick_ads_bg_color_new">{L_QUICK_ADS_BG_COLOR}:</label></dt>
+			<dd>
+				<input type="text" size="6" name="quick_ads_bg_color_new" value="#ffffff" id="quick_ads_bg_color_new" />
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="quick_ads_text_new">{L_QUICK_ADS_TEXT}:</label></dt>
+			<dd>
+				<textarea name="quick_ads_text_new" id="quick_ads_text_new" rows="2" cols="40" ></textarea>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="quick_ads_width_new">{L_QUICK_ADS_SIZE}:</label></dt>
+			<dd>
+				<input type="text" maxlength="4" size="4" name="quick_ads_width_new" value="0" id="quick_ads_width_new" />
+				&nbsp;x&nbsp;
+				<input type="text" maxlength="4" size="4" name="quick_ads_height_new" value="0" id="quick_ads_height_new" />
+			</dd>
+		</dl>
 		<p class="submit-buttons">
-			<input type="text" maxlength="30" size="20" name="quick_ads_add_new" value="{L_QUICK_ADS_ADD_FIELD_NAME}" />
-			<input class="button1" type="submit" name="add_field" value="{L_QUICK_ADS_ADD_FIELD}" />
+			<input class="button1" type="submit" name="add_field" value="{L_QUICK_ADS_NEW_ADS}" />
 		</p>
 	</fieldset>
 	
@@ -155,7 +193,7 @@
 			<dl>
 				<dt><label for="quick_ads_bg_color_{quick_ads_row.QUICK_ADS_ID}">{L_QUICK_ADS_BG_COLOR}:</label><br /><span>{L_QUICK_ADS_BG_COLOR_EXPLAIN}</span></dt>
 				<dd>
-					<input type="text" size="4" name="quick_ads_bg_color_{quick_ads_row.QUICK_ADS_ID}" value="{quick_ads_row.QUICK_ADS_BG_COLOR}" id="quick_ads_bg_color_{quick_ads_row.QUICK_ADS_ID}" />
+					<input type="text" size="6" name="quick_ads_bg_color_{quick_ads_row.QUICK_ADS_ID}" value="{quick_ads_row.QUICK_ADS_BG_COLOR}" id="quick_ads_bg_color_{quick_ads_row.QUICK_ADS_ID}" />
 				</dd>
 			</dl>
 			<dl>

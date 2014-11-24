@@ -23,8 +23,6 @@ Quick Ads alows you to:
 
 * Auto-scroll
 
-* 100% xHTML valid
-
 (Previous version: https://github.com/o0johntam0o/phpBB-Quick-Ads)
 
 ## Requirement

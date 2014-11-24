@@ -103,8 +103,8 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_PRIORITY'				=> 'Độ ưu tiên (Dạng số nguyên)',
 	'QUICK_ADS_PRIORITY_EXPLAIN'		=> 'Số <strong>càng thấp</strong>, độ ưu tiên <strong>càng cao</strong>',
 
-	'QUICK_ADS_ADD_FIELD'				=> 'Thêm Ads',
-	'QUICK_ADS_ADD_FIELD_NAME'			=> 'Tên Ads',
+	'QUICK_ADS_NEW_ADS'					=> 'Thêm Ads',
+	'QUICK_ADS_NEW_ADS_NAME'			=> 'Tên Ads',
 	'QUICK_ADS_DEL_FIELD'				=> 'Xóa Ads này',
 	'QUICK_ADS_DEL_FIELD_EXPLAIN'		=> '<strong style="color:#ff0000">Chú ý: hoạt động này sẽ không thể phục hồi</strong>',
 	

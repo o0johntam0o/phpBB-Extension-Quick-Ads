@@ -103,8 +103,8 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_PRIORITY'				=> 'Priority (Integer)',
 	'QUICK_ADS_PRIORITY_EXPLAIN'		=> 'The <strong>lower</strong> number, the <strong>higher</strong> priority',
 
-	'QUICK_ADS_ADD_FIELD'				=> 'New Ads',
-	'QUICK_ADS_ADD_FIELD_NAME'			=> 'Ads name',
+	'QUICK_ADS_NEW_ADS'					=> 'New Ads',
+	'QUICK_ADS_NEW_ADS_NAME'			=> 'Ads name',
 	'QUICK_ADS_DEL_FIELD'				=> 'Delete this Ads',
 	'QUICK_ADS_DEL_FIELD_EXPLAIN'		=> '<strong style="color:#ff0000">Note: this action can not be undo</strong>',
 	
