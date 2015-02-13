@@ -17,7 +17,24 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 */
 class main_listener implements EventSubscriberInterface
 {
-	protected $helper, $template, $user, $config, $request, $db, $table_prefix, $root_path, $php_ext;
+	/** @var \phpbb\controller\helper */
+	protected $helper;
+	/** @var \phpbb\template\template */
+	protected $template;
+	/** @var \phpbb\user */
+	protected $user;
+	/** @var \phpbb\config\config */
+	protected $config;
+	/** @var \phpbb\request\request */
+	protected $request;
+	/** @var \phpbb\db\driver\driver_interface */
+	protected $db;
+	/** @var string */
+	protected $table_prefix;
+	/** @var string */
+	protected $root_path;
+	/** @var string */
+	protected $php_ext;
 	
 	public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template, \phpbb\user $user, \phpbb\config\config $config, \phpbb\request\request $request, \phpbb\db\driver\driver_interface $db, $table_prefix, $root_path, $php_ext)
 	{

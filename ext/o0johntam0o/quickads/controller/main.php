@@ -12,11 +12,14 @@ namespace o0johntam0o\quickads\controller;
 
 class main
 {
-	protected $helper, $template;
+	/** @var \phpbb\controller\helper */
+	protected $helper;
+	/** @var \phpbb\template\template */
+	protected $template;
 	
 	public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template)
 	{
-		// TO-DO: Display all ads
+		// Formally ;)
 		$this->helper = $helper;
 		$this->template = $template;
 	}

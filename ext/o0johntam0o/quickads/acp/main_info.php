@@ -20,12 +20,12 @@ class main_info
 			'modes'		=> array(
 				'quick_ads_config'	=> array(
 					'title' => 'QUICK_ADS_TITLE_SETTINGS1',
-					'auth' => 'acl_a_board',
+					'auth' => 'ext_o0johntam0o/quickads && acl_a_board',
 					'cat' => array('QUICK_ADS_TITLE_SETTINGS1')
 				),
 				'quick_ads_config_details'	=> array(
 					'title' => 'QUICK_ADS_TITLE_SETTINGS2',
-					'auth' => 'acl_a_board',
+					'auth' => 'ext_o0johntam0o/quickads && acl_a_board',
 					'cat' => array('QUICK_ADS_TITLE_SETTINGS2')
 				),
 			),
