@@ -1,7 +1,7 @@
 {
 	"name": "o0johntam0o/quickads",
 	"type": "phpbb-extension",
-	"description": "Append any Ads, HTML, jQuery/JS code into your forum quickly. Very simple and useful.",
+	"description": "Append any Ads, HTML, jQuery/JS code into your forum quickly.",
 	"homepage": "https://github.com/o0johntam0o/phpBB-Extension-Quick-Ads",
 	"version": "2.0.0",
 	"keywords": [

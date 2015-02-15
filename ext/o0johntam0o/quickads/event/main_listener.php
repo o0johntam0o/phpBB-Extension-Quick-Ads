@@ -116,6 +116,7 @@ class main_listener implements EventSubscriberInterface
 		$quick_ads_sql = array(
 			'SELECT'	=> 'qa.*',
 			'FROM'		=> array($this->table_prefix . 'quick_ads' => 'qa'),
+			'WHERE'		=> 'qa.ads_pos > 0',
 			'ORDER_BY'	=> 'qa.ads_priority ASC',
 			);
 		$result = $this->db->sql_query($this->db->sql_build_query('SELECT', $quick_ads_sql));
@@ -123,7 +124,7 @@ class main_listener implements EventSubscriberInterface
 		{
 			$ads_onpage_arr = explode(',', $row['ads_onpage']);
 			$ads_check_group = explode(',', $row['ads_group']);
-			if (in_array($quick_ads_script_name, $ads_onpage_arr) && $row['ads_pos'] != 0 && in_array($this->user->data['group_id'], $ads_check_group))
+			if (in_array($quick_ads_script_name, $ads_onpage_arr) && in_array($this->user->data['group_id'], $ads_check_group))
 			{
 				if ($row['ads_pos'] == 1)	// Top
 				{

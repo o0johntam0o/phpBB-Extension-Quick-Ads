@@ -1,12 +1,12 @@
 <?php
 /**
 *
-* Quick Ads extension for the phpBB Forum Software package [British English]
+* Quick Ads extension for the phpBB Forum Software package [German]
+* German translation by tas2580 (https://tas2580.net)
 *
 * @copyright (c) 2014 o0johntam0o
 * @license GNU General Public License, version 2 (GPL-2.0)
-* 
-* German translation by tas2580 (https://tas2580.net)
+*
 */
 
 /**
@@ -49,7 +49,6 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_NAME_EXPLAIN'			=> 'Anzeige umbenennen',
 	'QUICK_ADS_POS'						=> 'Position',
 	'QUICK_ADS_POS_EXPLAIN'				=> 'Bestimme die Position für die Anzeige<br/>Der erste Wert deaktiviert die Anzeige',
-		
 	'QUICK_ADS_TOP'						=> 'Oben',
 	'QUICK_ADS_LEFT'					=> 'Liks',
 	'QUICK_ADS_BOTTOM'					=> 'Unten',
