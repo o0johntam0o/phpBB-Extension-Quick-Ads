@@ -39,10 +39,12 @@
 		<dl>
 			<dt><label>{L_QUICK_ADS_CLOSEBT}</label><br /><span>{L_QUICK_ADS_CLOSEBT_EXPLAIN}</span></dt>
 			<dd>
-				<input type="radio" class="radio" name="quick_ads_closebt" value="1" id="quick_ads_closebt_yes"<!-- IF S_QUICK_ADS_CLOSEBT --> checked="checked"<!-- ENDIF --> />
-				<label for="quick_ads_closebt_yes"> {L_YES}</label>
-				<input type="radio" class="radio" name="quick_ads_closebt" value="0" id="quick_ads_closebt_no"<!-- IF not S_QUICK_ADS_CLOSEBT --> checked="checked"<!-- ENDIF --> />
-				<label for="quick_ads_closebt_no"> {L_NO}</label>
+				<input type="radio" class="radio" name="quick_ads_closebt" value="0" id="quick_ads_closebt_disable"<!-- IF S_QUICK_ADS_CLOSEBT == 0 --> checked="checked"<!-- ENDIF --> />
+				<label for="quick_ads_closebt_disable"> {L_DISABLE}</label>
+				<input type="radio" class="radio" name="quick_ads_closebt" value="1" id="quick_ads_closebt_frame"<!-- IF S_QUICK_ADS_CLOSEBT == 1 --> checked="checked"<!-- ENDIF --> />
+				<label for="quick_ads_closebt_frame"> {L_QUICK_ADS_CLOSEBT_FRAME}</label>
+				<input type="radio" class="radio" name="quick_ads_closebt" value="2" id="quick_ads_closebt_ads"<!-- IF S_QUICK_ADS_CLOSEBT == 2 --> checked="checked"<!-- ENDIF --> />
+				<label for="quick_ads_closebt_ads"> {L_QUICK_ADS_CLOSEBT_ADS}</label>
 			</dd>
 		</dl>
 		<dl>
@@ -156,14 +158,17 @@
 	/* ]]> */
 	</script>
 
-	<!-- BEGIN quick_ads_row -->
 	<fieldset>
-		<legend onclick="Quick_Ads_Item_Toggle('quick_ads_item_{quick_ads_row.QUICK_ADS_ID}');" style="cursor:pointer;">{quick_ads_row.QUICK_ADS_LEGEND} ({L_QUICK_ADS_ITEM_TOGGLE})</legend>
+	<table style="border: none;">
+	<!-- BEGIN quick_ads_row -->
+	<tr><td style="border: 1px solid #D7D7D7;">
+		<div style="cursor: pointer; text-align: center; margin-bottom: 10px;" onclick="Quick_Ads_Item_Toggle('quick_ads_item_{quick_ads_row.QUICK_ADS_ID}');"><strong style="color: #AA0000;">{quick_ads_row.QUICK_ADS_LEGEND}</strong> ({L_QUICK_ADS_ITEM_TOGGLE})</div>
 		<div id="quick_ads_item_{quick_ads_row.QUICK_ADS_ID}" style="display:none;">
 			<dl>
 				<dt><label for="quick_ads_name_{quick_ads_row.QUICK_ADS_ID}">{L_QUICK_ADS_NAME}</label><br /><span>{L_QUICK_ADS_NAME_EXPLAIN}</span></dt>
 				<dd>
-					<input type="text" maxlength="30" size="20" name="quick_ads_name_{quick_ads_row.QUICK_ADS_ID}" value="{quick_ads_row.QUICK_ADS_NAME}" id="quick_ads_name_{quick_ads_row.QUICK_ADS_ID}" />
+					<input type="text" maxlength="30" size="20" name="quick_ads_name_{quick_ads_row.QUICK_ADS_ID}" value="{quick_ads_row.QUICK_ADS_NAME}" id="quick_ads_name_{quick_ads_row.QUICK_ADS_ID}" />&nbsp;
+					<a href="{quick_ads_row.U_QUICK_ADS_DELETE}" data-ajax="row_delete">{L_QUICK_ADS_DEL_ADS}</a>
 				</dd>
 			</dl>
 			<dl>
@@ -211,9 +216,8 @@
 				</dd>
 			</dl>
 			
-			<dl>
-				<dt><label onclick="Quick_Ads_Item_Toggle('quick_ads_more_prop_{quick_ads_row.QUICK_ADS_ID}');">{L_QUICK_ADS_MORE_PROP}</label></dt>
-			</dl>
+			<div style="cursor: pointer; text-align: center; margin-bottom: 10px;" onclick="Quick_Ads_Item_Toggle('quick_ads_more_prop_{quick_ads_row.QUICK_ADS_ID}');">{L_QUICK_ADS_MORE_PROP}</div>
+			
 			<div id="quick_ads_more_prop_{quick_ads_row.QUICK_ADS_ID}" style="display:none;">
 				<dl>
 					<dt><label for="quick_ads_priority_{quick_ads_row.QUICK_ADS_ID}">{L_QUICK_ADS_PRIORITY}</label><br /><span>{L_QUICK_ADS_PRIORITY_EXPLAIN}</span></dt>
@@ -283,19 +287,12 @@
 						<!-- END group -->
 					</dd>
 				</dl>
-				<dl>
-					<dt><label>{L_QUICK_ADS_DEL_FIELD}</label><br /><span>{L_QUICK_ADS_DEL_FIELD_EXPLAIN}</span></dt>
-					<dd>
-						<input type="radio" class="radio" name="quick_ads_del_{quick_ads_row.QUICK_ADS_ID}" value="1" id="quick_ads_del_{quick_ads_row.QUICK_ADS_ID}_yes" />
-						<label for="quick_ads_del_{quick_ads_row.QUICK_ADS_ID}_yes"> {L_YES}</label>
-						<input type="radio" class="radio" name="quick_ads_del_{quick_ads_row.QUICK_ADS_ID}" value="0" id="quick_ads_del_{quick_ads_row.QUICK_ADS_ID}_no" checked="checked" />
-						<label for="quick_ads_del_{quick_ads_row.QUICK_ADS_ID}_no"> {L_NO}</label>
-					</dd>
-				</dl>
 			</div>
 		</div>
-	</fieldset>
+	</td></tr>
 	<!-- END quick_ads_row -->
+	</table>
+	</fieldset>
 <!-- ENDIF --><!--// endif mode = details -->
 	<fieldset>
 		<legend>{L_ACP_SUBMIT_CHANGES}</legend>

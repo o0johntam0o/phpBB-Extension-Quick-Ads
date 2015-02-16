@@ -37,6 +37,8 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_ZINDEX_EXPLAIN'			=> 'Размещение объявлений "перед" или "после" других элементов.',
 	'QUICK_ADS_CLOSEBT'					=> 'Показывать кнопку Закрыть',
 	'QUICK_ADS_CLOSEBT_EXPLAIN'			=> 'Включить, чтобы пользователи могли закрывать объявления.',
+	'QUICK_ADS_CLOSEBT_FRAME'			=> 'On each frame',
+	'QUICK_ADS_CLOSEBT_ADS'				=> 'On each Ads',
 	'QUICK_ADS_COOKIE'					=> 'Включить cookie',
 	'QUICK_ADS_COOKIE_EXPLAIN'			=> 'Включить, чтобы хранить статус объявлений.',
 	'QUICK_ADS_COOKIE_TIME'				=> 'Время жизни cookie',
@@ -44,7 +46,7 @@ $lang = array_merge($lang, array(
 
 	'QUICK_ADS_LEGEND'					=> '%s [%d]',
 	'QUICK_ADS_ITEM_TOGGLE'				=> 'Нажмите, чтобы открыть',
-	'QUICK_ADS_MORE_PROP'				=> '<em style="color:#0000ff">Расширенные настройки (нажмите, чтобы открыть)</em>',
+	'QUICK_ADS_MORE_PROP'				=> '<em style="color:#0000ff">Расширенные настройки</em> (нажмите, чтобы открыть)',
 	'QUICK_ADS_NAME'					=> 'Название объявления',
 	'QUICK_ADS_NAME_EXPLAIN'			=> 'Rename this Ads',
 	'QUICK_ADS_POS'						=> 'Положение',
@@ -106,8 +108,9 @@ $lang = array_merge($lang, array(
 
 	'QUICK_ADS_NEW_ADS'					=> 'Новое объявление',
 	'QUICK_ADS_NEW_ADS_NAME'			=> 'Введите название',
-	'QUICK_ADS_DEL_FIELD'				=> 'Удалить это объявление',
-	'QUICK_ADS_DEL_FIELD_EXPLAIN'		=> '<strong style="color:#ff0000">Важно: это действие не может быть отменено.</strong>',
+	'QUICK_ADS_DEL_ADS'					=> '<strong>Delete this Ads</strong>',
+	'QUICK_ADS_DEL_ADS_CONFIRM'			=> 'Do you really want to delete this Ads?<br/><strong style="color:#ff0000">Note: this action can not be undo</strong>',
+	'QUICK_ADS_DEL_ADS_DELETED'			=> 'Deleted!',
 	
 	'QUICK_ADS_SAVED'					=> 'Настройки сохранены',
 	'QUICK_ADS_LOG_MSG'					=> '<strong>Изменение настроек объявления</strong>',

@@ -37,6 +37,8 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_ZINDEX_EXPLAIN'			=> 'Plaats Advertenties "achter" of "boven" een ander element',
 	'QUICK_ADS_CLOSEBT'					=> 'Laat X zien',
 	'QUICK_ADS_CLOSEBT_EXPLAIN'			=> 'Uitzetten door gebruiker mogelijk.',
+	'QUICK_ADS_CLOSEBT_FRAME'			=> 'On each frame',
+	'QUICK_ADS_CLOSEBT_ADS'				=> 'On each Ads',
 	'QUICK_ADS_COOKIE'					=> 'Zet Cookie aan',
 	'QUICK_ADS_COOKIE_EXPLAIN'			=> 'Het aantal weergeven van advertenties opslaan',
 	'QUICK_ADS_COOKIE_TIME'				=> 'Cookie tijd (Integer)',
@@ -44,7 +46,7 @@ $lang = array_merge($lang, array(
 
 	'QUICK_ADS_LEGEND'					=> '%s [%d]',
 	'QUICK_ADS_ITEM_TOGGLE'				=> 'Klik om in te schakelen',
-	'QUICK_ADS_MORE_PROP'				=> '<em style="color:#0000ff">Uitgebreid (Klik om in te schakelen)</em>',
+	'QUICK_ADS_MORE_PROP'				=> '<em style="color:#0000ff">Uitgebreid</em> (Klik om in te schakelen)',
 	'QUICK_ADS_NAME'					=> 'Advertentie Titel',
 	'QUICK_ADS_NAME_EXPLAIN'			=> 'Naam Advertentie',
 	'QUICK_ADS_POS'						=> 'Positie',
@@ -106,8 +108,9 @@ $lang = array_merge($lang, array(
 
 	'QUICK_ADS_NEW_ADS'					=> 'Nieuwe Advertentie',
 	'QUICK_ADS_NEW_ADS_NAME'			=> 'Advertentie Titel',
-	'QUICK_ADS_DEL_FIELD'				=> 'Verwijder deze Advertentie',
-	'QUICK_ADS_DEL_FIELD_EXPLAIN'		=> '<strong style="color:#ff0000">Let Op! Dit kan niet ongedaan worden gemaakt</strong>',
+	'QUICK_ADS_DEL_ADS'					=> '<strong>Delete this Ads</strong>',
+	'QUICK_ADS_DEL_ADS_CONFIRM'			=> 'Do you really want to delete this Ads?<br/><strong style="color:#ff0000">Note: this action can not be undo</strong>',
+	'QUICK_ADS_DEL_ADS_DELETED'			=> 'Deleted!',
 	
 	'QUICK_ADS_SAVED'					=> 'Advertentie Bewaard',
 	'QUICK_ADS_LOG_MSG'					=> '<strong>Advertentie instellingen Aangepast</strong>',
