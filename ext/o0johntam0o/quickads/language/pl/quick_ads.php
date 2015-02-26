@@ -2,7 +2,7 @@
 /**
 *
 * Quick Ads extension for the phpBB Forum Software package [Polish]
-* Polish translation by Hapek
+* Polish translation by HPK
 *
 * @copyright (c) 2014 o0johntam0o
 * @license GNU General Public License, version 2 (GPL-2.0)
@@ -35,10 +35,10 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_CUSTOM_ID_EXPLAIN'		=> 'Używaj wyłącznie liter <em style="color:#ff0000">a-z</em>, cyfr <em style="color:#ff0000">0-9</em> oraz <em style="color:#ff0000">podkreślenia</em> w miejsce odstępu (Zostaw puste, by użyć domyślnej wartości). Przykład: my_custom_id_123',
 	'QUICK_ADS_ZINDEX'					=> 'Z-Index (wartości całkowite)',
 	'QUICK_ADS_ZINDEX_EXPLAIN'			=> 'Umieszczaj reklamy "za" lub "przed" innymi elementami.',
-	'QUICK_ADS_CLOSEBT'					=> 'Show close button',
-	'QUICK_ADS_CLOSEBT_EXPLAIN'			=> 'To close Ads',
-	'QUICK_ADS_CLOSEBT_FRAME'			=> 'On each frame',
-	'QUICK_ADS_CLOSEBT_ADS'				=> 'On each Ads',
+	'QUICK_ADS_CLOSEBT'					=> 'Pokaż przycisk zamykania:',
+	'QUICK_ADS_CLOSEBT_EXPLAIN'			=> 'By użytkownik mógł zamykać wyświetlane reklamy.',
+	'QUICK_ADS_CLOSEBT_FRAME'	=> 'Na każdej ramce',
+	'QUICK_ADS_CLOSEBT_ADS'	=> 'Na każdej reklamie',
 	'QUICK_ADS_COOKIE'					=> 'Włącz ciasteczka',
 	'QUICK_ADS_COOKIE_EXPLAIN'			=> 'Aby reklamy były wyświetlane poprawnie.',
 	'QUICK_ADS_COOKIE_TIME'				=> 'Czas ciasteczek (wartości całkowite)',
@@ -108,9 +108,9 @@ $lang = array_merge($lang, array(
 
 	'QUICK_ADS_NEW_ADS'					=> 'Nowa reklama',
 	'QUICK_ADS_NEW_ADS_NAME'			=> 'Reklama',
-	'QUICK_ADS_DEL_ADS'					=> '<strong>Delete this Ads</strong>',
-	'QUICK_ADS_DEL_ADS_CONFIRM'			=> 'Do you really want to delete this Ads?<br/><strong style="color:#ff0000">Note: this action can not be undo</strong>',
-	'QUICK_ADS_DEL_ADS_DELETED'			=> 'Deleted!',
+	'QUICK_ADS_DEL_ADS'	=> '<strong>Usuń reklamę</strong>',
+	'QUICK_ADS_DEL_ADS_CONFIRM'	=> 'Jesteś pewien, że chcesz usunąć reklamę?<br/><strong style="color:#ff0000">Uwaga: tej akcji nie można cofnąć</strong>',
+	'QUICK_ADS_DEL_ADS_DELETED'	=> 'Reklama usunięta!',
 	
 	'QUICK_ADS_SAVED'					=> 'Konfiguracja została zmieniona.',
 	'QUICK_ADS_LOG_MSG'					=> '<strong>Zmienione ustawienia systemu reklam</strong>',
