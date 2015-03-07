@@ -27,8 +27,6 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_TITLE_SETTINGS1'			=> 'Algemene instellingen',
 	'QUICK_ADS_TITLE_SETTINGS2'			=> 'Details instellingen',
 	
-	'QUICK_ADS_ENABLE'					=> 'Schakel Advertenties in',
-	'QUICK_ADS_ENABLE_EXPLAIN'			=> 'Als Ja, zal de Advertenties worden getoont',
 	'QUICK_ADS_ALLOW_BOT'				=> 'Bots toestaan',
 	'QUICK_ADS_ALLOW_BOT_EXPLAIN'		=> 'Bots hebben toegang tot Advertenties',
 	'QUICK_ADS_CUSTOM_ID'				=> 'Gebruik ID',

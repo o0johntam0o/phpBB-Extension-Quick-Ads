@@ -27,8 +27,6 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_TITLE_SETTINGS1'			=> 'Allgemeine Einstellungen',
 	'QUICK_ADS_TITLE_SETTINGS2'			=> 'Erweiterte Einstellungen',
 	
-	'QUICK_ADS_ENABLE'					=> 'Anzeigen aktivieren',
-	'QUICK_ADS_ENABLE_EXPLAIN'			=> 'Wenn nicht aktiviert, werden die Anzeigen nicht mehr angezeigt',
 	'QUICK_ADS_ALLOW_BOT'				=> 'Bots erlauben',
 	'QUICK_ADS_ALLOW_BOT_EXPLAIN'		=> 'Anzeigen für Bots aktivieren',
 	'QUICK_ADS_CUSTOM_ID'				=> 'Custom ID',

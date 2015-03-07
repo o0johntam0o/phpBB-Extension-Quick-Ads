@@ -27,8 +27,6 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_TITLE_SETTINGS1'			=> 'Generella inställningar',
 	'QUICK_ADS_TITLE_SETTINGS2'			=> 'Detaljerade inställningar',
 
-	'QUICK_ADS_ENABLE'					=> 'Aktivera kvickannonser',
-	'QUICK_ADS_ENABLE_EXPLAIN'			=> 'Om du ej aktiverar detta tillägg så kommer annonserna ej att visas',
 	'QUICK_ADS_ALLOW_BOT'				=> 'Tillåt botar',
 	'QUICK_ADS_ALLOW_BOT_EXPLAIN'		=> 'Aktivera kvickannonser för botar',
 	'QUICK_ADS_CUSTOM_ID'				=> 'Egen ID',

@@ -75,9 +75,17 @@ class main_module
 			
 			if ($mode == 'quick_ads_config')
 			{
-				$this->config->set('quick_ads_enable', $this->request->variable('quick_ads_enable', 0));
 				$this->config->set('quick_ads_allow_bot', $this->request->variable('quick_ads_allow_bot', 0));
-				$this->config->set('quick_ads_custom_id', $this->request->variable('quick_ads_custom_id', ''));
+				
+				if ($this->request->variable('quick_ads_custom_id', '') == '')
+				{
+					$this->config->set('quick_ads_custom_id', 'quick_ads_');
+				}
+				else
+				{
+					$this->config->set('quick_ads_custom_id', $this->request->variable('quick_ads_custom_id', ''));
+				}
+				
 				$this->config->set('quick_ads_zindex', $this->request->variable('quick_ads_zindex', 100));
 				$this->config->set('quick_ads_closebt', $this->request->variable('quick_ads_closebt', 1));
 				$this->config->set('quick_ads_cookie', $this->request->variable('quick_ads_cookie', 0));
@@ -180,7 +188,7 @@ class main_module
 					
 					$ads_group_arr = $ads_group_sql . 'NULL';
 					$quick_ads_sql = array(
-						'ads_name'		=> utf8_normalize_nfc($this->request->variable('quick_ads_name_' . $row['ads_id'], 'Undefined', true)),
+						'ads_name'		=> utf8_normalize_nfc($this->request->variable('quick_ads_name_' . $row['ads_id'], $this->user->lang['QUICK_ADS_NEW_ADS_NAME'], true)),
 						'ads_pos'		=> $this->request->variable('quick_ads_pos_' . $row['ads_id'], 2),
 						'ads_onpage'	=> $ads_onpage_arr,
 						'ads_text'		=> utf8_normalize_nfc($this->request->variable('quick_ads_text_' . $row['ads_id'], '', true)),
@@ -215,7 +223,7 @@ class main_module
 				}
 				
 				$quick_ads_sql = array(
-					'ads_name'		=> utf8_normalize_nfc($this->request->variable('quick_ads_name_new', 'Undefined', true)),
+					'ads_name'		=> utf8_normalize_nfc($this->request->variable('quick_ads_name_new', $this->user->lang['QUICK_ADS_NEW_ADS_NAME'], true)),
 					'ads_pos'		=> $this->request->variable('quick_ads_pos_new', 2),
 					'ads_text'		=> utf8_normalize_nfc($this->request->variable('quick_ads_text_new', '', true)),
 					'ads_width'		=> ($this->request->variable('quick_ads_width_new', 50) < 0) ? 0 : $this->request->variable('quick_ads_width_new', 50),
@@ -242,8 +250,8 @@ class main_module
 					{
 						$json_response = new \phpbb\json_response;
 						$json_response->send(array(
-							'MESSAGE_TITLE'	=> $user->lang['INFORMATION'],
-							'MESSAGE_TEXT'	=> $user->lang['QUICK_ADS_DEL_ADS_DELETED'],
+							'MESSAGE_TITLE'	=> $this->user->lang['INFORMATION'],
+							'MESSAGE_TEXT'	=> $this->user->lang['QUICK_ADS_DEL_ADS_DELETED'],
 							'REFRESH_DATA'	=> array(
 								'time'	=> 3
 							)
@@ -252,7 +260,7 @@ class main_module
 				}
 				else
 				{
-					confirm_box(false, $user->lang['QUICK_ADS_DEL_ADS_CONFIRM'], build_hidden_fields(array(
+					confirm_box(false, $this->user->lang['QUICK_ADS_DEL_ADS_CONFIRM'], build_hidden_fields(array(
 						'i'			=> $id,
 						'mode'		=> $mode,
 						'ads_id'	=> $ads_id))
@@ -266,7 +274,6 @@ class main_module
 		{
 			$this->template->assign_vars(array(
 				'S_QUICK_ADS_ACP_INDEX'		=> true,
-				'S_QUICK_ADS_ENABLE'		=> isset($this->config['quick_ads_enable']) ? $this->config['quick_ads_enable'] : false,
 				'S_QUICK_ADS_ALLOW_BOT'		=> isset($this->config['quick_ads_allow_bot']) ? $this->config['quick_ads_allow_bot'] : false,
 				'S_QUICK_ADS_CUSTOM_ID'		=> isset($this->config['quick_ads_custom_id']) ? $this->config['quick_ads_custom_id'] : '',
 				'S_QUICK_ADS_ZINDEX'		=> isset($this->config['quick_ads_zindex']) ? $this->config['quick_ads_zindex'] : 0,

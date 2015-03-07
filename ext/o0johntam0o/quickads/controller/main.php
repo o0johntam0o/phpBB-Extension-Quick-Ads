@@ -26,9 +26,6 @@ class main
 	
 	public function base()
 	{
-		$this->template->assign_vars(array(
-		'S_QUICK_ADS_AVAILABLE' 	=> true,
-		));
 		return $this->helper->render('quick_ads.html');
 	}
 }
