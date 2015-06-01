@@ -3,10 +3,11 @@
 *
 * Quick Ads extension for the phpBB Forum Software package [Estonian]
 *
-* @copyright (c) 2014 o0johntam0o; Estonian translation by phpBBeesti.com 05/2015
+* @copyright (c) 2014 o0johntam0o
 * @license GNU General Public License, version 2 (GPL-2.0)
 *
 */
+
 /**
 * DO NOT CHANGE
 */
@@ -14,10 +15,12 @@ if (!defined('IN_PHPBB'))
 {
 	exit;
 }
+
 if (empty($lang) || !is_array($lang))
 {
 	$lang = array();
 }
+
 $lang = array_merge($lang, array(
 	'QUICK_ADS_TITLE'					=> 'Reklaamide süsteem',
 	'QUICK_ADS_TITLE_SETTINGS1'			=> 'Üldised seaded',
@@ -37,6 +40,7 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_COOKIE_EXPLAIN'			=> 'Et salvestada näidatava reklaami olekut',
 	'QUICK_ADS_COOKIE_TIME'				=> 'Küpsiste aeg (Täisarv)',
 	'QUICK_ADS_COOKIE_TIME_EXPLAIN'		=> 'Kui kauaks reklaam on peidetud (minutites)',
+	
 	'QUICK_ADS_LEGEND'					=> '%s [%d]',
 	'QUICK_ADS_ITEM_TOGGLE'				=> 'Vajuta, et näha seadeid',
 	'QUICK_ADS_MORE_PROP'				=> '<em style="color:#0000ff">Täpsemad</em> (vajuta, et näha seadeid)',
@@ -48,6 +52,8 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_LEFT'					=> 'Vasakul',
 	'QUICK_ADS_BOTTOM'					=> 'All',
 	'QUICK_ADS_RIGHT'					=> 'Paremal',
+	'QUICK_ADS_TOP_STATIC'				=> 'Üleval (Static)',
+	'QUICK_ADS_BOTTOM_STATIC'			=> 'All (Static)',
 	
 	'QUICK_ADS_ONPAGE'					=> 'Lehekülgedel',
 	'QUICK_ADS_ONPAGE_EXPLAIN'			=> 'Millistel lehekülgedel näidatakse antud reklaami',
@@ -96,8 +102,15 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_OVERF_VISIBLE'			=> 'Nähtav',
 	'QUICK_ADS_OVERF_SCROLL'			=> 'keritav',
 	'QUICK_ADS_OVERF_AUTO'				=> 'Auto',
+	'QUICK_ADS_BORDER'					=> 'Border style',
+	'QUICK_ADS_BORDER_EXPLAIN'			=> 'Border around this Ads',
+	'QUICK_ADS_BORDER0'					=> 'None',
+	'QUICK_ADS_BORDER1'					=> 'Solid',
+	'QUICK_ADS_BORDER2'					=> 'Dotted',
+	'QUICK_ADS_BORDER3'					=> 'Dashed',
 	'QUICK_ADS_PRIORITY'				=> 'Proriteet (Täisarv)',
 	'QUICK_ADS_PRIORITY_EXPLAIN'		=> 'Mida <strong>madalam</strong> number, seda <strong>kõrgem</strong> on prioriteet',
+	
 	'QUICK_ADS_NEW_ADS'					=> 'Uus reklaam',
 	'QUICK_ADS_NEW_ADS_NAME'			=> 'Reklaami nimi',
 	'QUICK_ADS_DEL_ADS'					=> '<strong>Kustuta see reklaam</strong>',

@@ -52,6 +52,8 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_LEFT'					=> 'Left',
 	'QUICK_ADS_BOTTOM'					=> 'Bottom',
 	'QUICK_ADS_RIGHT'					=> 'Right',
+	'QUICK_ADS_TOP_STATIC'				=> 'Top (Static)',
+	'QUICK_ADS_BOTTOM_STATIC'			=> 'Bottom (Static)',
 	
 	'QUICK_ADS_ONPAGE'					=> 'On pages',
 	'QUICK_ADS_ONPAGE_EXPLAIN'			=> 'Which page will show this ads',
@@ -100,6 +102,12 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_OVERF_VISIBLE'			=> 'Visible',
 	'QUICK_ADS_OVERF_SCROLL'			=> 'Scroll',
 	'QUICK_ADS_OVERF_AUTO'				=> 'Auto',
+	'QUICK_ADS_BORDER'					=> 'Border style',
+	'QUICK_ADS_BORDER_EXPLAIN'			=> 'Border around this Ads',
+	'QUICK_ADS_BORDER0'					=> 'None',
+	'QUICK_ADS_BORDER1'					=> 'Solid',
+	'QUICK_ADS_BORDER2'					=> 'Dotted',
+	'QUICK_ADS_BORDER3'					=> 'Dashed',
 	'QUICK_ADS_PRIORITY'				=> 'Priority (Integer)',
 	'QUICK_ADS_PRIORITY_EXPLAIN'		=> 'The <strong>lower</strong> number, the <strong>higher</strong> priority',
 

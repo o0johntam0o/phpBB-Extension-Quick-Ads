@@ -52,6 +52,8 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_LEFT'					=> 'Trái',
 	'QUICK_ADS_BOTTOM'					=> 'Dưới',
 	'QUICK_ADS_RIGHT'					=> 'Phải',
+	'QUICK_ADS_TOP_STATIC'				=> 'Trên (Tĩnh)',
+	'QUICK_ADS_BOTTOM_STATIC'			=> 'Dưới (Tĩnh)',
 	
 	'QUICK_ADS_ONPAGE'					=> 'Chọn trang',
 	'QUICK_ADS_ONPAGE_EXPLAIN'			=> 'Những trang nào sẽ hiển thị Ads này',
@@ -100,6 +102,12 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_OVERF_VISIBLE'			=> 'Hiển thị',
 	'QUICK_ADS_OVERF_SCROLL'			=> 'Cuộn lại',
 	'QUICK_ADS_OVERF_AUTO'				=> 'Tự động',
+	'QUICK_ADS_BORDER'					=> 'Kiểu đường biên',
+	'QUICK_ADS_BORDER_EXPLAIN'			=> 'Đường biên quanh Ads này',
+	'QUICK_ADS_BORDER0'					=> 'Không có',
+	'QUICK_ADS_BORDER1'					=> 'Đường thẳng',
+	'QUICK_ADS_BORDER2'					=> 'Dấu chấm',
+	'QUICK_ADS_BORDER3'					=> 'Đường đứt khúc',
 	'QUICK_ADS_PRIORITY'				=> 'Độ ưu tiên (Dạng số nguyên)',
 	'QUICK_ADS_PRIORITY_EXPLAIN'		=> 'Số <strong>càng thấp</strong>, độ ưu tiên <strong>càng cao</strong>',
 

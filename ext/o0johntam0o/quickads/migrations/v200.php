@@ -61,14 +61,15 @@ class v200 extends \phpbb\db\migration\migration
 						'ads_id'			=> array('UINT', NULL, 'auto_increment'),
 						'ads_name'			=> array('VCHAR', 'Undefined'),
 						'ads_group'			=> array('VCHAR', '1,2,3,4,5,7'),
-						'ads_pos'			=> array('INT:1', 2),	// 0 = disable, 1 = top, 2 = bottom, 3 = left, 4 = right
+						'ads_pos'			=> array('INT:1', 2),	// 0 = disable, 1 = top, 2 = bottom, 3 = left, 4 = right, 5 = top (static), 6 = bottom (static)
 						'ads_onpage'		=> array('VCHAR', 'faq,index,mcp,memberlist,posting,report,search,ucp,viewforum,viewonline,viewtopic'),
 						'ads_text'			=> array('MTEXT_UNI', ''),
 						'ads_href'			=> array('VCHAR', ''),
 						'ads_bg_img'		=> array('VCHAR', ''),
-						'ads_bg_color'		=> array('VCHAR', '#ffffff'),
+						'ads_bg_color'		=> array('VCHAR', 'transparent'),
 						'ads_width'			=> array('INT:4', 50),
 						'ads_height'		=> array('INT:4', 50),
+						'ads_border'		=> array('INT:1', 1),	// 0 = none, 1 = solid, 2 = dotted, 3 = dashed
 						'ads_overf'			=> array('INT:1', 0),	// 0 = hidden, 1 = visible, 2 = scroll, 3 = auto
 						'ads_priority'		=> array('INT:2', 99),
 					),

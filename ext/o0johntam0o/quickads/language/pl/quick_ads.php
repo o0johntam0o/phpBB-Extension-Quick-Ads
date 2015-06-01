@@ -2,7 +2,6 @@
 /**
 *
 * Quick Ads extension for the phpBB Forum Software package [Polish]
-* Polish translation by HPK
 *
 * @copyright (c) 2014 o0johntam0o
 * @license GNU General Public License, version 2 (GPL-2.0)
@@ -49,10 +48,12 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_NAME_EXPLAIN'			=> 'Możesz zmienić nazwę w dowolnej chwili.',
 	'QUICK_ADS_POS'						=> 'Pozycja',
 	'QUICK_ADS_POS_EXPLAIN'				=> 'Ustaw pozycję reklamy.<br />Wybierz "Zablokuj" by wyłączyć wyświetlanie reklamy.',
-	'QUICK_ADS_TOP'						=> 'reklama u góry',
-	'QUICK_ADS_LEFT'					=> 'reklama po lewej',
-	'QUICK_ADS_BOTTOM'					=> 'reklama na dole',
-	'QUICK_ADS_RIGHT'					=> 'reklama po prawej',
+	'QUICK_ADS_TOP'						=> 'Reklama u góry',
+	'QUICK_ADS_LEFT'					=> 'Reklama po lewej',
+	'QUICK_ADS_BOTTOM'					=> 'Reklama na dole',
+	'QUICK_ADS_RIGHT'					=> 'Reklama po prawej',
+	'QUICK_ADS_TOP_STATIC'				=> 'Reklama u góry (Static)',
+	'QUICK_ADS_BOTTOM_STATIC'			=> 'Reklama na dole (Static)',
 	
 	'QUICK_ADS_ONPAGE'					=> 'Pokaż reklamę na',
 	'QUICK_ADS_ONPAGE_EXPLAIN'			=> 'Na której stronie ma wyświetlać się reklama?',
@@ -101,14 +102,20 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_OVERF_VISIBLE'			=> 'Pokazuj całość',
 	'QUICK_ADS_OVERF_SCROLL'			=> 'Suwak do przewijania',
 	'QUICK_ADS_OVERF_AUTO'				=> 'Suwak jeśli będzie konieczny',
+	'QUICK_ADS_BORDER'					=> 'Border style',
+	'QUICK_ADS_BORDER_EXPLAIN'			=> 'Border around this Ads',
+	'QUICK_ADS_BORDER0'					=> 'None',
+	'QUICK_ADS_BORDER1'					=> 'Solid',
+	'QUICK_ADS_BORDER2'					=> 'Dotted',
+	'QUICK_ADS_BORDER3'					=> 'Dashed',
 	'QUICK_ADS_PRIORITY'				=> 'Priorytet (wartość całkowita)',
 	'QUICK_ADS_PRIORITY_EXPLAIN'		=> 'Im <strong>mniejsza</strong> wartość, tym <strong>wyższy</strong> priorytet.',
 
 	'QUICK_ADS_NEW_ADS'					=> 'Nowa reklama',
 	'QUICK_ADS_NEW_ADS_NAME'			=> 'Reklama',
-	'QUICK_ADS_DEL_ADS'	=> '<strong>Usuń reklamę</strong>',
-	'QUICK_ADS_DEL_ADS_CONFIRM'	=> 'Jesteś pewien, że chcesz usunąć reklamę?<br/><strong style="color:#ff0000">Uwaga: tej akcji nie można cofnąć</strong>',
-	'QUICK_ADS_DEL_ADS_DELETED'	=> 'Reklama usunięta!',
+	'QUICK_ADS_DEL_ADS'					=> '<strong>Usuń reklamę</strong>',
+	'QUICK_ADS_DEL_ADS_CONFIRM'			=> 'Jesteś pewien, że chcesz usunąć reklamę?<br/><strong style="color:#ff0000">Uwaga: tej akcji nie można cofnąć</strong>',
+	'QUICK_ADS_DEL_ADS_DELETED'			=> 'Reklama usunięta!',
 	
 	'QUICK_ADS_SAVED'					=> 'Konfiguracja została zmieniona.',
 	'QUICK_ADS_LOG_MSG'					=> '<strong>Zmienione ustawienia systemu reklam</strong>',

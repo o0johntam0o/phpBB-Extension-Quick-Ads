@@ -2,7 +2,6 @@
 /**
 *
 * Quick Ads extension for the phpBB Forum Software package [Rushian]
-* Rushian translation by FomenkoAndrey
 *
 * @copyright (c) 2014 o0johntam0o
 * @license GNU General Public License, version 2 (GPL-2.0)
@@ -53,6 +52,8 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_LEFT'					=> 'Слева',
 	'QUICK_ADS_BOTTOM'					=> 'Низ',
 	'QUICK_ADS_RIGHT'					=> 'Справа',
+	'QUICK_ADS_TOP_STATIC'				=> 'Верх (Static)',
+	'QUICK_ADS_BOTTOM_STATIC'			=> 'Низ (Static)',
 	
 	'QUICK_ADS_ONPAGE'					=> 'Показывать на страницах',
 	'QUICK_ADS_ONPAGE_EXPLAIN'			=> 'На каких страницах будет показано объявление',
@@ -101,6 +102,12 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_OVERF_VISIBLE'			=> 'Показать',
 	'QUICK_ADS_OVERF_SCROLL'			=> 'Прокрутить',
 	'QUICK_ADS_OVERF_AUTO'				=> 'Авто',
+	'QUICK_ADS_BORDER'					=> 'Border style',
+	'QUICK_ADS_BORDER_EXPLAIN'			=> 'Border around this Ads',
+	'QUICK_ADS_BORDER0'					=> 'None',
+	'QUICK_ADS_BORDER1'					=> 'Solid',
+	'QUICK_ADS_BORDER2'					=> 'Dotted',
+	'QUICK_ADS_BORDER3'					=> 'Dashed',
 	'QUICK_ADS_PRIORITY'				=> 'Приоритет (целове число)',
 	'QUICK_ADS_PRIORITY_EXPLAIN'		=> '<strong>Меньшее</strong> число, <strong>высокий</strong> приоритет.',
 

@@ -2,7 +2,6 @@
 /**
 *
 * Quick Ads extension for the phpBB Forum Software package [Dutch]
-* Dutch translation by OmkePom
 *
 * @copyright (c) 2014 o0johntam0o
 * @license GNU General Public License, version 2 (GPL-2.0)
@@ -53,6 +52,8 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_LEFT'					=> 'Links',
 	'QUICK_ADS_BOTTOM'					=> 'Onderaan',
 	'QUICK_ADS_RIGHT'					=> 'Rechts',
+	'QUICK_ADS_TOP_STATIC'				=> 'Bovenaan (Static)',
+	'QUICK_ADS_BOTTOM_STATIC'			=> 'Onderaan (Static)',
 	
 	'QUICK_ADS_ONPAGE'					=> 'Welke Forums',
 	'QUICK_ADS_ONPAGE_EXPLAIN'			=> 'Welke Forums wordt Advertentie getoont',
@@ -101,6 +102,12 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_OVERF_VISIBLE'			=> 'Zichtbaar',
 	'QUICK_ADS_OVERF_SCROLL'			=> 'Scroll',
 	'QUICK_ADS_OVERF_AUTO'				=> 'Auto',
+	'QUICK_ADS_BORDER'					=> 'Border style',
+	'QUICK_ADS_BORDER_EXPLAIN'			=> 'Border around this Ads',
+	'QUICK_ADS_BORDER0'					=> 'None',
+	'QUICK_ADS_BORDER1'					=> 'Solid',
+	'QUICK_ADS_BORDER2'					=> 'Dotted',
+	'QUICK_ADS_BORDER3'					=> 'Dashed',
 	'QUICK_ADS_PRIORITY'				=> 'Prioriteit (Integer)',
 	'QUICK_ADS_PRIORITY_EXPLAIN'		=> 'Hoe <strong>lager</strong> het nummer, hoe <strong>hoger</strong> prioriteit',
 

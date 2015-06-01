@@ -104,13 +104,15 @@
 					<option value="2">{L_QUICK_ADS_BOTTOM}</option>
 					<option value="3">{L_QUICK_ADS_LEFT}</option>
 					<option value="4">{L_QUICK_ADS_RIGHT}</option>
+					<option value="5">{L_QUICK_ADS_TOP_STATIC}</option>
+					<option value="6">{L_QUICK_ADS_BOTTOM_STATIC}</option>
 				</select>
 			</dd>
 		</dl>
 		<dl>
-			<dt><label for="quick_ads_bg_color_new">{L_QUICK_ADS_BG_COLOR}</label></dt>
+			<dt><label for="quick_ads_bg_img_new">{L_QUICK_ADS_BG_IMG}</label></dt>
 			<dd>
-				<input type="text" size="6" name="quick_ads_bg_color_new" value="#ffffff" id="quick_ads_bg_color_new" />
+				<input type="text" size="60" name="quick_ads_bg_img_new" value="" id="quick_ads_bg_img_new" />
 			</dd>
 		</dl>
 		<dl>
@@ -171,6 +173,8 @@
 						<option value="2" <!-- IF quick_ads_row.QUICK_ADS_POS == 2 --> selected="selected"<!-- ENDIF -->>{L_QUICK_ADS_BOTTOM}</option>
 						<option value="3" <!-- IF quick_ads_row.QUICK_ADS_POS == 3 --> selected="selected"<!-- ENDIF -->>{L_QUICK_ADS_LEFT}</option>
 						<option value="4" <!-- IF quick_ads_row.QUICK_ADS_POS == 4 --> selected="selected"<!-- ENDIF -->>{L_QUICK_ADS_RIGHT}</option>
+						<option value="5" <!-- IF quick_ads_row.QUICK_ADS_POS == 5 --> selected="selected"<!-- ENDIF -->>{L_QUICK_ADS_TOP_STATIC}</option>
+						<option value="6" <!-- IF quick_ads_row.QUICK_ADS_POS == 6 --> selected="selected"<!-- ENDIF -->>{L_QUICK_ADS_BOTTOM_STATIC}</option>
 					</select>
 				</dd>
 			</dl>
@@ -189,7 +193,18 @@
 			<dl>
 				<dt><label for="quick_ads_bg_color_{quick_ads_row.QUICK_ADS_ID}">{L_QUICK_ADS_BG_COLOR}</label><br /><span>{L_QUICK_ADS_BG_COLOR_EXPLAIN}</span></dt>
 				<dd>
-					<input type="text" size="6" name="quick_ads_bg_color_{quick_ads_row.QUICK_ADS_ID}" value="{quick_ads_row.QUICK_ADS_BG_COLOR}" id="quick_ads_bg_color_{quick_ads_row.QUICK_ADS_ID}" />
+					<input type="text" size="10" name="quick_ads_bg_color_{quick_ads_row.QUICK_ADS_ID}" value="{quick_ads_row.QUICK_ADS_BG_COLOR}" id="quick_ads_bg_color_{quick_ads_row.QUICK_ADS_ID}" />
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="quick_ads_border_{quick_ads_row.QUICK_ADS_ID}">{L_QUICK_ADS_BORDER}</label><br /><span>{L_QUICK_ADS_BORDER_EXPLAIN}</span></dt>
+				<dd>
+					<select name="quick_ads_border_{quick_ads_row.QUICK_ADS_ID}" id="quick_ads_border_{quick_ads_row.QUICK_ADS_ID}">
+						<option value="0" <!-- IF quick_ads_row.QUICK_ADS_BORDER == 0 --> selected="selected"<!-- ENDIF -->>{L_QUICK_ADS_BORDER0}</option>
+						<option value="1" <!-- IF quick_ads_row.QUICK_ADS_BORDER == 1 --> selected="selected"<!-- ENDIF -->>{L_QUICK_ADS_BORDER1}</option>
+						<option value="2" <!-- IF quick_ads_row.QUICK_ADS_BORDER == 2 --> selected="selected"<!-- ENDIF -->>{L_QUICK_ADS_BORDER2}</option>
+						<option value="3" <!-- IF quick_ads_row.QUICK_ADS_BORDER == 3 --> selected="selected"<!-- ENDIF -->>{L_QUICK_ADS_BORDER3}</option>
+					</select>
 				</dd>
 			</dl>
 			<dl>
@@ -264,8 +279,8 @@
 						<label> {L_QUICK_ADS_ONPAGE_ITEM_VIEWTOPIC}</label>
 
 						<!--// Custom pages //-->
-						<!--// <br /><input type="checkbox" class="radio" name="quick_ads_onpage_{quick_ads_row.QUICK_ADS_ID}[]" value="12"<!-/- IF quick_ads_row.QUICK_ADS_ONPAGE_YOUR_STUFF -/-> checked="checked"<!-/- ENDIF -/-> /> //-->
-						<!--// <label> {L_QUICK_ADS_ONPAGE_ITEM_YOUR_STUFF}</label> //-->
+						<!--// <br /><input type="checkbox" class="radio" name="quick_ads_onpage_{quick_ads_row.QUICK_ADS_ID}[]" value="12"<!-/- IF quick_ads_row.QUICK_ADS_ONPAGE_CUSTOM_PAGE -/-> checked="checked"<!-/- ENDIF -/-> /> //-->
+						<!--// <label> {L_QUICK_ADS_ONPAGE_ITEM_CUSTOM_PAGE}</label> //-->
 						<!--// Custom pages //-->
 					</dd>
 				</dl>

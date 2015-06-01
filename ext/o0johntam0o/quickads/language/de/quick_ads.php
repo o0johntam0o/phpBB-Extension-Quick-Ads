@@ -2,7 +2,6 @@
 /**
 *
 * Quick Ads extension for the phpBB Forum Software package [German]
-* German translation by tas2580 (https://tas2580.net)
 *
 * @copyright (c) 2014 o0johntam0o
 * @license GNU General Public License, version 2 (GPL-2.0)
@@ -53,6 +52,8 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_LEFT'					=> 'Liks',
 	'QUICK_ADS_BOTTOM'					=> 'Unten',
 	'QUICK_ADS_RIGHT'					=> 'Rechts',
+	'QUICK_ADS_TOP_STATIC'				=> 'Oben (Static)',
+	'QUICK_ADS_BOTTOM_STATIC'			=> 'Unten (Static)',
 	
 	'QUICK_ADS_ONPAGE'					=> 'Auf Seiten',
 	'QUICK_ADS_ONPAGE_EXPLAIN'			=> 'Auf welchenSeiten soll die Anzeige angezeigt werden',
@@ -101,6 +102,12 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_OVERF_VISIBLE'			=> 'Anzeigen',
 	'QUICK_ADS_OVERF_SCROLL'			=> 'Scrollen',
 	'QUICK_ADS_OVERF_AUTO'				=> 'Auto',
+	'QUICK_ADS_BORDER'					=> 'Border style',
+	'QUICK_ADS_BORDER_EXPLAIN'			=> 'Border around this Ads',
+	'QUICK_ADS_BORDER0'					=> 'None',
+	'QUICK_ADS_BORDER1'					=> 'Solid',
+	'QUICK_ADS_BORDER2'					=> 'Dotted',
+	'QUICK_ADS_BORDER3'					=> 'Dashed',
 	'QUICK_ADS_PRIORITY'				=> 'Priorität (Integer)',
 	'QUICK_ADS_PRIORITY_EXPLAIN'		=> 'Um so <strong>kleiner</strong> der Wert, um so <strong>höher</strong> ist die Priorität',
 

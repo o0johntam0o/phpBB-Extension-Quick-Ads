@@ -56,7 +56,15 @@ class main_module
 		
 		$this->tpl_name = 'acp_quick_ads';
 		$this->page_title = $this->user->lang('QUICK_ADS_TITLE');
-		add_form_key('o0johntam0o/acp_quick_ads');
+		
+		if ($mode == 'quick_ads_config')
+		{
+			add_form_key('o0johntam0o/acp_quick_ads');
+		}
+		else if ($mode == 'quick_ads_config_details')
+		{
+			add_form_key('o0johntam0o/acp_quick_ads_details');
+		}
 		
 		if ($mode == 'quick_ads_config_details')
 		{
@@ -68,13 +76,13 @@ class main_module
 		// **************** INPUT **************** //
 		if ($this->request->is_set_post('submit'))
 		{
-			if (!check_form_key('o0johntam0o/acp_quick_ads'))
-			{
-				trigger_error('FORM_INVALID');
-			}
-			
 			if ($mode == 'quick_ads_config')
 			{
+				if (!check_form_key('o0johntam0o/acp_quick_ads'))
+				{
+					trigger_error('FORM_INVALID');
+				}
+			
 				$this->config->set('quick_ads_allow_bot', $this->request->variable('quick_ads_allow_bot', 0));
 				
 				if ($this->request->variable('quick_ads_custom_id', '') == '')
@@ -102,82 +110,87 @@ class main_module
 			}
 			else if ($mode == 'quick_ads_config_details')
 			{
+				if (!check_form_key('o0johntam0o/acp_quick_ads_details'))
+				{
+					trigger_error('FORM_INVALID');
+				}
+				
 				$quick_ads_sql = 'SELECT ads_id FROM ' . $this->table_prefix . 'quick_ads';
 				$result = $this->db->sql_query($quick_ads_sql);
 				
 				while ($row = $this->db->sql_fetchrow($result))
 				{
+					// Onpage string
 					$ads_onpage_arr = $this->request->variable('quick_ads_onpage_' . $row['ads_id'], array(0));
 					$ads_onpage_sql = '';
 					
 					foreach ($ads_onpage_arr as $key => $value)
 					{
-						// -----------------------------------
 						$value = (int) $value;
 						
 						switch ($value)
 						{
 							case 0:
-								$value = 'NULL';
+								$ads_onpage_sql .= 'NULL,';
 							break;
 							
 							case 1:
-								$value = 'faq';
+								$ads_onpage_sql .= 'faq,';
 							break;
 							
 							case 2:
-								$value = 'index';
+								$ads_onpage_sql .= 'index,';
 							break;
 							
 							case 3:
-								$value = 'mcp';
+								$ads_onpage_sql .= 'mcp,';
 							break;
 							
 							case 4:
-								$value = 'memberlist';
+								$ads_onpage_sql .= 'memberlist,';
 							break;
 							
 							case 5:
-								$value = 'posting';
+								$ads_onpage_sql .= 'posting,';
 							break;
 							
 							case 6:
-								$value = 'report';
+								$ads_onpage_sql .= 'report,';
 							break;
 							
 							case 7:
-								$value = 'search';
+								$ads_onpage_sql .= 'search,';
 							break;
 							
 							case 8:
-								$value = 'ucp';
+								$ads_onpage_sql .= 'ucp,';
 							break;
 							
 							case 9:
-								$value = 'viewforum';
+								$ads_onpage_sql .= 'viewforum,';
 							break;
 							
 							case 10:
-								$value = 'viewonline';
+								$ads_onpage_sql .= 'viewonline,';
 							break;
 							
 							case 11:
-								$value = 'viewtopic';
+								$ads_onpage_sql .= 'viewtopic,';
 							break;
 							// === Custom pages ===
 							// case 12:
-							//	$value = 'your_stuff';
+							//	$ads_onpage_sql .= 'custom_page,';
 							// break;
 							// === Custom pages ===
 							default:
-								$value = 'NULL';
+								$ads_onpage_sql .= 'NULL,';
 							break;
 						}
-						// -------------------------------------
-						$ads_onpage_sql .= $value . ',';
 					}
 					
 					$ads_onpage_arr = $ads_onpage_sql . 'NULL';
+					
+					// Group string
 					$ads_group_arr = $this->request->variable('quick_ads_group_' . $row['ads_id'], array(0));
 					$ads_group_sql = '';
 					
@@ -187,6 +200,8 @@ class main_module
 					}
 					
 					$ads_group_arr = $ads_group_sql . 'NULL';
+					
+					// Main query
 					$quick_ads_sql = array(
 						'ads_name'		=> utf8_normalize_nfc($this->request->variable('quick_ads_name_' . $row['ads_id'], $this->user->lang['QUICK_ADS_NEW_ADS_NAME'], true)),
 						'ads_pos'		=> $this->request->variable('quick_ads_pos_' . $row['ads_id'], 2),
@@ -194,8 +209,9 @@ class main_module
 						'ads_text'		=> utf8_normalize_nfc($this->request->variable('quick_ads_text_' . $row['ads_id'], '', true)),
 						'ads_width'		=> ($this->request->variable('quick_ads_width_' . $row['ads_id'], 50) < 0) ? 0 : $this->request->variable('quick_ads_width_' . $row['ads_id'], 50),
 						'ads_height'	=> ($this->request->variable('quick_ads_height_' . $row['ads_id'], 50) < 0) ? 0 : $this->request->variable('quick_ads_height_' . $row['ads_id'], 50),
+						'ads_border'	=> ($this->request->variable('quick_ads_border_' . $row['ads_id'], 1) < 0) ? 0 : $this->request->variable('quick_ads_border_' . $row['ads_id'], 1),
 						'ads_bg_img'	=> utf8_normalize_nfc($this->request->variable('quick_ads_bg_img_' . $row['ads_id'], '')),
-						'ads_bg_color'	=> utf8_normalize_nfc($this->request->variable('quick_ads_bg_color_' . $row['ads_id'], '#ffffff')),
+						'ads_bg_color'	=> utf8_normalize_nfc($this->request->variable('quick_ads_bg_color_' . $row['ads_id'], 'transparent')),
 						'ads_href'		=> utf8_normalize_nfc($this->request->variable('quick_ads_href_' . $row['ads_id'], '')),
 						'ads_overf'		=> $this->request->variable('quick_ads_overf_' . $row['ads_id'], 0),
 						'ads_group'		=> $ads_group_arr,
@@ -203,7 +219,7 @@ class main_module
 					);
 					$quick_ads_sql = 'UPDATE ' . $this->table_prefix . 'quick_ads' . '
 							SET ' . $this->db->sql_build_array('UPDATE', $quick_ads_sql) . '
-							WHERE ads_id = ' . $row['ads_id'];
+							WHERE ads_id = ' . (int)$row['ads_id'];
 					
 					$this->db->sql_query($quick_ads_sql);
 				}
@@ -217,7 +233,7 @@ class main_module
 		{
 			if ($this->request->is_set_post('add_field'))
 			{
-				if (!check_form_key('o0johntam0o/acp_quick_ads'))
+				if (!check_form_key('o0johntam0o/acp_quick_ads_details'))
 				{
 					trigger_error('FORM_INVALID');
 				}
@@ -228,7 +244,7 @@ class main_module
 					'ads_text'		=> utf8_normalize_nfc($this->request->variable('quick_ads_text_new', '', true)),
 					'ads_width'		=> ($this->request->variable('quick_ads_width_new', 50) < 0) ? 0 : $this->request->variable('quick_ads_width_new', 50),
 					'ads_height'	=> ($this->request->variable('quick_ads_height_new', 50) < 0) ? 0 : $this->request->variable('quick_ads_height_new', 50),
-					'ads_bg_color'	=> utf8_normalize_nfc($this->request->variable('quick_ads_bg_color_new', '#ffffff')),
+					'ads_bg_img'	=> utf8_normalize_nfc($this->request->variable('quick_ads_bg_img_new', '')),
 				);
 				$quick_ads_sql = 'INSERT INTO ' . $this->table_prefix . 'quick_ads ' . $this->db->sql_build_array('INSERT', $quick_ads_sql);
 				
@@ -330,11 +346,12 @@ class main_module
 					'QUICK_ADS_ONPAGE_VIEWONLINE'	=> in_array('viewonline', $ads_onpage_arr) ? 1 : 0,
 					'QUICK_ADS_ONPAGE_VIEWTOPIC'	=> in_array('viewtopic', $ads_onpage_arr) ? 1 : 0,
 					// === Custom pages ===
-					// 'QUICK_ADS_ONPAGE_YOUR_STUFF'	=> in_array('your_stuff', $ads_onpage_arr) ? 1 : 0,
+					// 'QUICK_ADS_ONPAGE_CUSTOM_PAGE'	=> in_array('custom_page', $ads_onpage_arr) ? 1 : 0,
 					// === Custom pages ===
 					'QUICK_ADS_TEXT'				=> $row['ads_text'],
 					'QUICK_ADS_WIDTH'				=> $row['ads_width'],
 					'QUICK_ADS_HEIGHT'				=> $row['ads_height'],
+					'QUICK_ADS_BORDER'				=> $row['ads_border'],
 					'QUICK_ADS_BG_IMG'				=> $row['ads_bg_img'],
 					'QUICK_ADS_BG_COLOR'			=> $row['ads_bg_color'],
 					'QUICK_ADS_HREF'				=> $row['ads_href'],

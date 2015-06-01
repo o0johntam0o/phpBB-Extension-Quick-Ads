@@ -2,7 +2,6 @@
 /**
 *
 * Quick Ads extension for the phpBB Forum Software package [Swedish]
-* Swedish translation by Holger (http://www.maskinisten.net)
 *
 * @copyright (c) 2014 o0johntam0o
 * @license GNU General Public License, version 2 (GPL-2.0)
@@ -53,6 +52,8 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_LEFT'					=> 'Vänster',
 	'QUICK_ADS_BOTTOM'					=> 'Botten',
 	'QUICK_ADS_RIGHT'					=> 'Höger',
+	'QUICK_ADS_TOP_STATIC'				=> 'Topp (Static)',
+	'QUICK_ADS_BOTTOM_STATIC'			=> 'Botten (Static)',
 
 	'QUICK_ADS_ONPAGE'					=> 'På sidor',
 	'QUICK_ADS_ONPAGE_EXPLAIN'			=> 'Vilken sida ska visa denna annons',
@@ -101,6 +102,12 @@ $lang = array_merge($lang, array(
 	'QUICK_ADS_OVERF_VISIBLE'			=> 'Visa',
 	'QUICK_ADS_OVERF_SCROLL'			=> 'Skrolla',
 	'QUICK_ADS_OVERF_AUTO'				=> 'Auto',
+	'QUICK_ADS_BORDER'					=> 'Border style',
+	'QUICK_ADS_BORDER_EXPLAIN'			=> 'Border around this Ads',
+	'QUICK_ADS_BORDER0'					=> 'None',
+	'QUICK_ADS_BORDER1'					=> 'Solid',
+	'QUICK_ADS_BORDER2'					=> 'Dotted',
+	'QUICK_ADS_BORDER3'					=> 'Dashed',
 	'QUICK_ADS_PRIORITY'				=> 'Prioritet (integer)',
 	'QUICK_ADS_PRIORITY_EXPLAIN'		=> 'Ju <strong>lägre</strong> värde, desto <strong>högre</strong> prioritet',
 
