@@ -1,12 +1,20 @@
 <!-- IF (S_IS_BOT and S_QUICK_ADS_ALLOW_BOT) or not S_IS_BOT -->
 <!-- IF S_QUICK_ADS_BOTTOM_STATIC -->
-<div class="panel" id="{S_QUICK_ADS_CUSTOM_ID}bs">
+<div class="panel" id="{S_QUICK_ADS_CUSTOM_ID}bs" style="z-index:{S_QUICK_ADS_ZINDEX};">
+	<!-- IF S_QUICK_ADS_CLOSEBT == 1 -->
+	<div class="quickads_closebt" onclick="quickAds_Close('#{S_QUICK_ADS_CUSTOM_ID}bs', '#{S_QUICK_ADS_CUSTOM_ID}bs'<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
+	<!-- ENDIF -->
+	
 	<div class="inner" style="overflow: hidden;">
 		<table class="quickads_table" style="position: relative;">
 			<tbody>
 				<tr>
 					<!-- BEGIN quick_ads_row_bottom_static -->
 					<td valign="middle" class="quickads_items_border{quick_ads_row_bottom_static.QUICK_ADS_BORDER}">
+						<!-- IF S_QUICK_ADS_CLOSEBT == 2 -->
+						<div class="quickads_closebt" onclick="quickAds_Close('#{S_QUICK_ADS_CUSTOM_ID}i{quick_ads_row_bottom_static.QUICK_ADS_ID}', this.parentNode<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
+						<!-- ENDIF -->
+						
 						<div id="{S_QUICK_ADS_CUSTOM_ID}i{quick_ads_row_bottom_static.QUICK_ADS_ID}" class="quickads_items quickads_items_bottom_static" style="background-color: {quick_ads_row_bottom_static.QUICK_ADS_BG_COLOR}; overflow: {quick_ads_row_bottom_static.QUICK_ADS_OVERF}; <!-- IF quick_ads_row_bottom_static.QUICK_ADS_BG_IMG != '' -->background-image: url('{quick_ads_row_bottom_static.QUICK_ADS_BG_IMG}'); <!-- ENDIF -->width: <!-- IF quick_ads_row_bottom_static.QUICK_ADS_WIDTH > 0 -->{quick_ads_row_bottom_static.QUICK_ADS_WIDTH}px<!-- ELSE -->auto<!-- ENDIF -->; <!-- IF quick_ads_row_bottom_static.QUICK_ADS_HEIGHT > 0 -->height: {quick_ads_row_bottom_static.QUICK_ADS_HEIGHT}px<!-- ELSE -->auto<!-- ENDIF -->;"<!-- IF quick_ads_row_bottom_static.QUICK_ADS_HREF != '' --> onclick="window.open('{quick_ads_row_bottom_static.QUICK_ADS_HREF}'); return false;"<!-- ENDIF -->>
 							{quick_ads_row_bottom_static.QUICK_ADS_TEXT}
 						</div>

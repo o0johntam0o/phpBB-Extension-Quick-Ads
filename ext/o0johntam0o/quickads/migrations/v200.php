@@ -36,6 +36,10 @@ class v200 extends \phpbb\db\migration\migration
 			array('config.add', array('quick_ads_hmin_top', 0)),
 			array('config.add', array('quick_ads_wmin_bottom', 0)),
 			array('config.add', array('quick_ads_hmin_bottom', 0)),
+			array('config.add', array('quick_ads_wmin_top_static', 0)),
+			array('config.add', array('quick_ads_hmin_top_static', 0)),
+			array('config.add', array('quick_ads_wmin_bottom_static', 0)),
+			array('config.add', array('quick_ads_hmin_bottom_static', 0)),
 			array('module.add', array(
 				'acp',
 				'ACP_CAT_DOT_MODS',

@@ -43,6 +43,7 @@
 	background-image: url(./images/closebt.png);
 	background-repeat: no-repeat;
 	background-position: top left;
+	z-index: 1;
 }
 
 .quickads_table

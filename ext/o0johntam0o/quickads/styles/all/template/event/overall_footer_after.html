@@ -15,6 +15,7 @@
 		<!-- IF S_QUICK_ADS_CLOSEBT == 1 -->
 		<div class="quickads_closebt" onclick="quickAds_Close('#{S_QUICK_ADS_CUSTOM_ID}l', '#{S_QUICK_ADS_CUSTOM_ID}l'<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
 		<!-- ENDIF -->
+		
 		<table class="quickads_table">
 			<tbody>
 				<!-- BEGIN quick_ads_row_left -->
@@ -44,6 +45,18 @@
 			</tbody>
 		</table>
 	</div>
+	
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	jQuery(document).ready(function()
+	{
+		<!-- IF S_QUICK_ADS_COOKIE -->
+		quickAds_CheckCookie(quickAds_frameL, jQuery(quickAds_frameL)[0]);
+		<!-- ENDIF -->
+		quickAds_CheckDimension(quickAds_frameL, {S_QUICK_ADS_WMIN_LEFT}, {S_QUICK_ADS_HMIN_LEFT});
+	});
+	/* ]]> */
+	</script>
 	<!-- ENDIF -->
 	
 	<!-- IF S_QUICK_ADS_RIGHT -->
@@ -80,6 +93,18 @@
 			</tbody>
 		</table>
 	</div>
+	
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	jQuery(document).ready(function()
+	{
+		<!-- IF S_QUICK_ADS_COOKIE -->
+		quickAds_CheckCookie(quickAds_frameR, jQuery(quickAds_frameR)[0]);
+		<!-- ENDIF -->
+		quickAds_CheckDimension(quickAds_frameR, {S_QUICK_ADS_WMIN_RIGHT}, {S_QUICK_ADS_HMIN_RIGHT});
+	});
+	/* ]]> */
+	</script>
 	<!-- ENDIF -->
 	
 	<!-- IF S_QUICK_ADS_TOP -->
@@ -116,6 +141,18 @@
 			</tbody>
 		</table>
 	</div>
+	
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	jQuery(document).ready(function()
+	{
+		<!-- IF S_QUICK_ADS_COOKIE -->
+		quickAds_CheckCookie(quickAds_frameT, jQuery(quickAds_frameT)[0]);
+		<!-- ENDIF -->
+		quickAds_CheckDimension(quickAds_frameT, {S_QUICK_ADS_WMIN_TOP}, {S_QUICK_ADS_HMIN_TOP});
+	});
+	/* ]]> */
+	</script>
 	<!-- ENDIF -->
 	
 	<!-- IF S_QUICK_ADS_BOTTOM -->
@@ -152,42 +189,73 @@
 			</tbody>
 		</table>
 	</div>
-	<!-- ENDIF -->
 	
 	<script type="text/javascript">
 	/* <![CDATA[ */
 	jQuery(document).ready(function()
 	{
-		<!-- IF S_QUICK_ADS_LEFT -->
-			<!-- IF S_QUICK_ADS_COOKIE -->
-			quickAds_CheckCookie(quickAds_frameL, jQuery(quickAds_frameL)[0]);
-			<!-- ENDIF -->
-			quickAds_CheckDimension(quickAds_frameL, {S_QUICK_ADS_WMIN_LEFT}, {S_QUICK_ADS_HMIN_LEFT});
+		<!-- IF S_QUICK_ADS_COOKIE -->
+		quickAds_CheckCookie(quickAds_frameB, jQuery(quickAds_frameB)[0]);
 		<!-- ENDIF -->
-		
-		<!-- IF S_QUICK_ADS_RIGHT -->
-			<!-- IF S_QUICK_ADS_COOKIE -->
-			quickAds_CheckCookie(quickAds_frameR, jQuery(quickAds_frameR)[0]);
-			<!-- ENDIF -->
-			quickAds_CheckDimension(quickAds_frameR, {S_QUICK_ADS_WMIN_RIGHT}, {S_QUICK_ADS_HMIN_RIGHT});
-		<!-- ENDIF -->
-		
-		<!-- IF S_QUICK_ADS_TOP -->
-			<!-- IF S_QUICK_ADS_COOKIE -->
-			quickAds_CheckCookie(quickAds_frameT, jQuery(quickAds_frameT)[0]);
-			<!-- ENDIF -->
-			quickAds_CheckDimension(quickAds_frameT, {S_QUICK_ADS_WMIN_TOP}, {S_QUICK_ADS_HMIN_TOP});
-		<!-- ENDIF -->
-		
-		<!-- IF S_QUICK_ADS_BOTTOM -->
-			<!-- IF S_QUICK_ADS_COOKIE -->
-			quickAds_CheckCookie(quickAds_frameB, jQuery(quickAds_frameB)[0]);
-			<!-- ENDIF -->
-			quickAds_CheckDimension(quickAds_frameB, {S_QUICK_ADS_WMIN_BOTTOM}, {S_QUICK_ADS_HMIN_BOTTOM});
-		<!-- ENDIF -->
+		quickAds_CheckDimension(quickAds_frameB, {S_QUICK_ADS_WMIN_BOTTOM}, {S_QUICK_ADS_HMIN_BOTTOM});
 	});
 	/* ]]> */
 	</script>
+	<!-- ENDIF -->
+	
+	<!-- IF S_QUICK_ADS_TOP_STATIC -->
+		<!-- BEGIN quick_ads_row_top_static -->
+			<!-- IF S_QUICK_ADS_COOKIE -->
+			<script type="text/javascript">
+			/* <![CDATA[ */
+			jQuery(document).ready(function()
+			{
+				quickAds_CheckCookie('#{S_QUICK_ADS_CUSTOM_ID}i{quick_ads_row_top_static.QUICK_ADS_ID}', jQuery('#{S_QUICK_ADS_CUSTOM_ID}i{quick_ads_row_top_static.QUICK_ADS_ID}')[0].parentNode);
+			});
+			/* ]]> */
+			</script>
+			<!-- ENDIF -->
+		<!-- END quick_ads_row_top_static -->
+		
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		jQuery(document).ready(function()
+		{
+			<!-- IF S_QUICK_ADS_COOKIE -->
+			quickAds_CheckCookie(quickAds_frameTS, jQuery(quickAds_frameTS)[0]);
+			<!-- ENDIF -->
+			quickAds_CheckDimension(quickAds_frameTS, {S_QUICK_ADS_WMIN_TOP_STATIC}, {S_QUICK_ADS_HMIN_TOP_STATIC});
+		});
+		/* ]]> */
+		</script>
+	<!-- ENDIF -->
+	
+	<!-- IF S_QUICK_ADS_BOTTOM_STATIC -->
+		<!-- BEGIN quick_ads_row_bottom_static -->
+			<!-- IF S_QUICK_ADS_COOKIE -->
+			<script type="text/javascript">
+			/* <![CDATA[ */
+			jQuery(document).ready(function()
+			{
+				quickAds_CheckCookie('#{S_QUICK_ADS_CUSTOM_ID}i{quick_ads_row_bottom_static.QUICK_ADS_ID}', jQuery('#{S_QUICK_ADS_CUSTOM_ID}i{quick_ads_row_bottom_static.QUICK_ADS_ID}')[0].parentNode);
+			});
+			/* ]]> */
+			</script>
+			<!-- ENDIF -->
+		<!-- END quick_ads_row_bottom_static -->
+		
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		jQuery(document).ready(function()
+		{
+			<!-- IF S_QUICK_ADS_COOKIE -->
+			quickAds_CheckCookie(quickAds_frameBS, jQuery(quickAds_frameBS)[0]);
+			<!-- ENDIF -->
+			quickAds_CheckDimension(quickAds_frameBS, {S_QUICK_ADS_WMIN_BOTTOM_STATIC}, {S_QUICK_ADS_HMIN_BOTTOM_STATIC});
+		});
+		/* ]]> */
+		</script>
+	<!-- ENDIF -->
 	
 	<!-- INCLUDEJS @o0johntam0o_quickads/script.js -->
 <!-- ENDIF -->

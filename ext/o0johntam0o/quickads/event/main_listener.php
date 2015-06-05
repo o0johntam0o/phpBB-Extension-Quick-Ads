@@ -199,6 +199,10 @@ class main_listener implements EventSubscriberInterface
 				'S_QUICK_ADS_HMIN_TOP'			=> isset($this->config['quick_ads_hmin_top']) ? $this->config['quick_ads_hmin_top'] : 0,
 				'S_QUICK_ADS_WMIN_BOTTOM'		=> isset($this->config['quick_ads_wmin_bottom']) ? $this->config['quick_ads_wmin_bottom'] : 0,
 				'S_QUICK_ADS_HMIN_BOTTOM'		=> isset($this->config['quick_ads_hmin_bottom']) ? $this->config['quick_ads_hmin_bottom'] : 0,
+				'S_QUICK_ADS_WMIN_TOP_STATIC'			=> isset($this->config['quick_ads_wmin_top_static']) ? $this->config['quick_ads_wmin_top_static'] : 0,
+				'S_QUICK_ADS_HMIN_TOP_STATIC'			=> isset($this->config['quick_ads_hmin_top_static']) ? $this->config['quick_ads_hmin_top_static'] : 0,
+				'S_QUICK_ADS_WMIN_BOTTOM_STATIC'		=> isset($this->config['quick_ads_wmin_bottom_static']) ? $this->config['quick_ads_wmin_bottom_static'] : 0,
+				'S_QUICK_ADS_HMIN_BOTTOM_STATIC'		=> isset($this->config['quick_ads_hmin_bottom_static']) ? $this->config['quick_ads_hmin_bottom_static'] : 0,
 			));
 		}
 		else
