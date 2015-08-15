@@ -2,10 +2,10 @@ var tmp;
 
 jQuery(document).ready(function()
 {
-	quickAds_Scroll(jQuery(quickAds_frameL), 'left');
-	quickAds_Scroll(jQuery(quickAds_frameR), 'right');
-	quickAds_Scroll(jQuery(quickAds_frameT), 'top');
-	quickAds_Scroll(jQuery(quickAds_frameB), 'bottom');
+	quickAds_Scroll(quickAds_frameL, 'left');
+	quickAds_Scroll(quickAds_frameR, 'right');
+	quickAds_Scroll(quickAds_frameT, 'top');
+	quickAds_Scroll(quickAds_frameB, 'bottom');
 	quickAds_SetPos();
 	quickAds_Scroll_Marquee(quickAds_frameTS + ' > div > table');
 	quickAds_Scroll_Marquee(quickAds_frameBS + ' > div > table');
@@ -74,17 +74,17 @@ function quickAds_SetPos()
 
 function quickAds_Scroll(el, pos)
 {
-	if (el.length > 0)
+	if (jQuery(el).length > 0)
 	{
 		var selfHeight, windowHeight, scrollTop, scrollLeft;
 		
-		el.css({'display':'block'});
+		jQuery(el).css({'display':'block'});
 		
 		jQuery(window).scroll(function()
 		{
-			if (el.width() != 0)
+			if (jQuery(el).width() != 0)
 			{
-				selfHeight = el.height();
+				selfHeight = jQuery(el).height();
 				windowHeight = jQuery(window).height();
 				scrollTop = jQuery(window).scrollTop();
 				scrollLeft = jQuery(window).scrollLeft();
@@ -92,27 +92,27 @@ function quickAds_Scroll(el, pos)
 				{
 					if (selfHeight <= windowHeight)
 					{
-						el.animate({top:scrollTop+5}, {duration:800,queue:false});
+						jQuery(el).animate({top:scrollTop+5}, {duration:800,queue:false});
 					}
 					else
 					{
 						if (selfHeight <= windowHeight + scrollTop)
 						{
 							tmp = windowHeight - selfHeight + scrollTop;
-							el.animate({top:tmp}, {duration:800,queue:false});
+							jQuery(el).animate({top:tmp}, {duration:800,queue:false});
 						}
 						else
 						{
-							el.animate({top:5}, {duration:800,queue:false});
+							jQuery(el).animate({top:5}, {duration:800,queue:false});
 						}
 					}
 					if (pos == 'left')
 					{
-						el.css({'left':5+scrollLeft});
+						jQuery(el).css({'left':5+scrollLeft});
 					}
 					else
 					{
-						el.css({'right':5-scrollLeft});
+						jQuery(el).css({'right':5-scrollLeft});
 					}
 				}
 				else if (pos == 'top' || pos == 'bottom')
@@ -121,11 +121,11 @@ function quickAds_Scroll(el, pos)
 					
 					if (pos == 'top')
 					{
-						el.animate({top:scrollTop+5}, {duration:800,queue:false});
+						jQuery(el).animate({top:scrollTop+5}, {duration:800,queue:false});
 					}
 					else
 					{
-						el.animate({bottom:5-scrollTop}, {duration:800,queue:false});
+						jQuery(el).animate({bottom:5-scrollTop}, {duration:800,queue:false});
 					}
 				}
 			}
@@ -139,11 +139,11 @@ function quickAds_Scroll(el, pos)
 			{
 				if (pos == 'left')
 				{
-					el.css({'left':5+scrollLeft});
+					jQuery(el).css({'left':5+scrollLeft});
 				}
 				else
 				{
-					el.css({'right':5-scrollLeft});
+					jQuery(el).css({'right':5-scrollLeft});
 				}
 			}
 			else if (pos == 'top' || pos == 'bottom')
@@ -154,7 +154,7 @@ function quickAds_Scroll(el, pos)
 	}
 	else
 	{
-		el.css({'display':'none'});
+		jQuery(el).css({'display':'none'});
 	}
 }
 		
@@ -178,34 +178,34 @@ function quickAds_Close(id, el, time)
 	}
 }
 
-function quickAds_CheckDimension(id, wmin, hmin)
+function quickAds_CheckDimension(el, wmin, hmin)
 {
-	if (jQuery(id).length > 0)
+	if (jQuery(el).length > 0)
 	{
 		if (jQuery(window).width() < wmin || jQuery(window).height() < hmin)
 		{
-			jQuery(id).css({'display':'none'});
+			jQuery(el).css({'display':'none'});
 		}
 		else
 		{
-			jQuery(id).css({'display':'block'});
+			jQuery(el).css({'display':'block'});
 		}
 	
 		jQuery(window).resize(function()
 		{
 			if (jQuery(window).width() < wmin || jQuery(window).height() < hmin)
 			{
-				jQuery(id).css({'display':'none'});
+				jQuery(el).css({'display':'none'});
 			}
 			else
 			{
-				jQuery(id).css({'display':'block'});
+				jQuery(el).css({'display':'block'});
 			}
 		});
 	}
 	else
 	{
-		jQuery(id).css({'display':'none'});
+		jQuery(el).css({'display':'none'});
 	}
 }
 
