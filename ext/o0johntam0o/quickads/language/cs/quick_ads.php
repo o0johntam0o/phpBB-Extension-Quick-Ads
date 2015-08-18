@@ -1,9 +1,9 @@
 <?php
 /**
 *
-* Quick Ads extension for the phpBB Forum Software package [British English]
+* Quick Ads extension for the phpBB Forum Software package [Czech]
 *
-* @copyright (c) 2014 o0johntam0o
+* @copyright (c) 2015 o0johntam0o, translated by R3gi
 * @license GNU General Public License, version 2 (GPL-2.0)
 *
 */
