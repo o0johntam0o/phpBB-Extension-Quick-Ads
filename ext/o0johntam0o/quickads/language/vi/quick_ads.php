@@ -28,8 +28,10 @@ $lang = array_merge($lang, array(
 	
 	'QUICK_ADS_ALLOW_BOT'				=> 'Cho phép máy tìm kiếm',
 	'QUICK_ADS_ALLOW_BOT_EXPLAIN'		=> 'Kích hoạt Quick Ads cho các máy tìm kiếm',
-	'QUICK_ADS_CUSTOM_ID'				=> 'Tùy biến ID',
-	'QUICK_ADS_CUSTOM_ID_EXPLAIN'		=> 'Chỉ được sử dụng <em style="color:#ff0000">a-z</em>, <em style="color:#ff0000">0-9</em> và <em style="color:#ff0000">dấu gạch chân</em> (Bỏ trống để sử dụng giá trị mặc định). Ví dụ: my_custom_id_123',
+	'QUICK_ADS_DENY_ADSBLOCKER'			=> 'Từ chối máy chặn quảng cáo',
+	'QUICK_ADS_DENY_ADSBLOCKER_EXPLAIN'	=> 'Không cho người dùng xem nội dung bài viết với các máy chặn quảng cáo',
+	'QUICK_ADS_DENY_ADSBLOCKER_MSG1'	=> 'Vui lòng tắt các máy chặn quảng cáo để xem nội dung bài viết',
+	'QUICK_ADS_DENY_ADSBLOCKER_MSG2'	=> 'Vui lòng mở tính năng JavaScript để xem nội dung bài viết',
 	'QUICK_ADS_ZINDEX'					=> 'Z-Index (Dạng số nguyên)',
 	'QUICK_ADS_ZINDEX_EXPLAIN'			=> 'Dùng để đặt Quick Ads "bên trên" hoặc "bên dưới" các thành phần khác',
 	'QUICK_ADS_CLOSEBT'					=> 'Hiển thị nút đóng',

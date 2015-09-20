@@ -23,7 +23,7 @@ class v200 extends \phpbb\db\migration\migration
 			array('config.add', array('quick_ads_version', '2.0.0')),
 			
 			array('config.add', array('quick_ads_allow_bot', 0)),
-			array('config.add', array('quick_ads_custom_id', 'quick_ads_')),
+			array('config.add', array('quick_ads_deny_adsblocker', 0)),
 			array('config.add', array('quick_ads_zindex', 100)),
 			array('config.add', array('quick_ads_closebt', 1)),	// 0 = Disable; 1 = On each frame; 2 = On each Ads
 			array('config.add', array('quick_ads_cookie', 1)),

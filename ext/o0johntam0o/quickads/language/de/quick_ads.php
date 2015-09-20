@@ -28,8 +28,10 @@ $lang = array_merge($lang, array(
 	
 	'QUICK_ADS_ALLOW_BOT'				=> 'Bots erlauben',
 	'QUICK_ADS_ALLOW_BOT_EXPLAIN'		=> 'Anzeigen für Bots aktivieren',
-	'QUICK_ADS_CUSTOM_ID'				=> 'Custom ID',
-	'QUICK_ADS_CUSTOM_ID_EXPLAIN'		=> 'Benutze nur <em style="color:#ff0000">a-z</em>, <em style="color:#ff0000">0-9</em> und <em style="color:#ff0000">Unterstriche</em> (Leer lassen um den Standard zu verwenden). Beispiel: my_custom_id_123',
+	'QUICK_ADS_DENY_ADSBLOCKER'			=> 'Deny Ads Blockers',
+	'QUICK_ADS_DENY_ADSBLOCKER_EXPLAIN'	=> 'Prevent user from reading post with Ads Blockers',
+	'QUICK_ADS_DENY_ADSBLOCKER_MSG1'	=> 'Please turn your Ads Blocker off to see post content',
+	'QUICK_ADS_DENY_ADSBLOCKER_MSG2'	=> 'Please enable the JavaScript to see post content',
 	'QUICK_ADS_ZINDEX'					=> 'Z-Index (Integer)',
 	'QUICK_ADS_ZINDEX_EXPLAIN'			=> 'Plaziere die Anzeigen "hinter" oder "über" einem anderen Element',
 	'QUICK_ADS_CLOSEBT'					=> 'Zeige schließen Button',

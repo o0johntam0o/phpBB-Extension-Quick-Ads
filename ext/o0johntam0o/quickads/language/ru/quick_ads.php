@@ -28,8 +28,10 @@ $lang = array_merge($lang, array(
 	
 	'QUICK_ADS_ALLOW_BOT'				=> 'Разрещить ботам',
 	'QUICK_ADS_ALLOW_BOT_EXPLAIN'		=> 'Показывать объявления ботам.',
-	'QUICK_ADS_CUSTOM_ID'				=> 'Custom ID',
-	'QUICK_ADS_CUSTOM_ID_EXPLAIN'		=> 'Используйте только <em style="color:#ff0000">a-z</em>, <em style="color:#ff0000">0-9</em> и <em style="color:#ff0000">underline</em> (оставьте пустым, чтобы использовать значение по умолчанию). Например: my_custom_id_123.',
+	'QUICK_ADS_DENY_ADSBLOCKER'			=> 'Deny Ads Blockers',
+	'QUICK_ADS_DENY_ADSBLOCKER_EXPLAIN'	=> 'Prevent user from reading post with Ads Blockers',
+	'QUICK_ADS_DENY_ADSBLOCKER_MSG1'	=> 'Please turn your Ads Blocker off to see post content',
+	'QUICK_ADS_DENY_ADSBLOCKER_MSG2'	=> 'Please enable the JavaScript to see post content',
 	'QUICK_ADS_ZINDEX'					=> 'Z-Index (Integer)',
 	'QUICK_ADS_ZINDEX_EXPLAIN'			=> 'Размещение объявлений "перед" или "после" других элементов.',
 	'QUICK_ADS_CLOSEBT'					=> 'Показывать кнопку Закрыть',

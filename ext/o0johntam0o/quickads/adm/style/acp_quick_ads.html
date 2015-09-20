@@ -16,12 +16,6 @@
 			</dd>
 		</dl>
 		<dl>
-			<dt><label for="quick_ads_custom_id">{L_QUICK_ADS_CUSTOM_ID}</label><br /><span>{L_QUICK_ADS_CUSTOM_ID_EXPLAIN}</span></dt>
-			<dd>
-				<input type="text" maxlength="50" size="30" name="quick_ads_custom_id" value="{S_QUICK_ADS_CUSTOM_ID}" id="quick_ads_custom_id" />
-			</dd>
-		</dl>
-		<dl>
 			<dt><label for="quick_ads_zindex">{L_QUICK_ADS_ZINDEX}</label><br /><span>{L_QUICK_ADS_ZINDEX_EXPLAIN}</span></dt>
 			<dd>
 				<input type="text" maxlength="4" size="4" name="quick_ads_zindex" value="{S_QUICK_ADS_ZINDEX}" id="quick_ads_zindex" />
@@ -36,6 +30,15 @@
 				<label for="quick_ads_closebt_frame"> {L_QUICK_ADS_CLOSEBT_FRAME}</label>
 				<input type="radio" class="radio" name="quick_ads_closebt" value="2" id="quick_ads_closebt_ads"<!-- IF S_QUICK_ADS_CLOSEBT == 2 --> checked="checked"<!-- ENDIF --> />
 				<label for="quick_ads_closebt_ads"> {L_QUICK_ADS_CLOSEBT_ADS}</label>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="quick_ads_deny_adsblocker">{L_QUICK_ADS_DENY_ADSBLOCKER}</label><br /><span>{L_QUICK_ADS_DENY_ADSBLOCKER_EXPLAIN}</span></dt>
+			<dd>
+				<input type="radio" class="radio" name="quick_ads_deny_adsblocker" value="1" id="quick_ads_deny_adsblocker_yes"<!-- IF S_QUICK_ADS_DENY_ADSBLOCKER --> checked="checked"<!-- ENDIF --> />
+				<label for="quick_ads_deny_adsblocker_yes"> {L_YES}</label>
+				<input type="radio" class="radio" name="quick_ads_deny_adsblocker" value="0" id="quick_ads_deny_adsblocker_no"<!-- IF not S_QUICK_ADS_DENY_ADSBLOCKER --> checked="checked"<!-- ENDIF --> />
+				<label for="quick_ads_deny_adsblocker_no"> {L_NO}</label>
 			</dd>
 		</dl>
 		<dl>

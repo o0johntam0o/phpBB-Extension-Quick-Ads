@@ -28,8 +28,10 @@ $lang = array_merge($lang, array(
 	
 	'QUICK_ADS_ALLOW_BOT'				=> 'السماح بمحركات البحث ',
 	'QUICK_ADS_ALLOW_BOT_EXPLAIN'		=> 'تستطيع محركات البحث مُشاهدة الإعلانات السريعة',
-	'QUICK_ADS_CUSTOM_ID'				=> 'ID مُخصص ',
-	'QUICK_ADS_CUSTOM_ID_EXPLAIN'		=> 'استخدم <em style="color:#ff0000">a-z</em>, <em style="color:#ff0000">0-9</em> و <em style="color:#ff0000">خط أسفل الكلمة</em> فقط ( أتركه فارغاً لو تريد إستخدام القيمة الإفتراضية ). مثال : my_custom_id_123',
+	'QUICK_ADS_DENY_ADSBLOCKER'			=> 'Deny Ads Blockers',
+	'QUICK_ADS_DENY_ADSBLOCKER_EXPLAIN'	=> 'Prevent user from reading post with Ads Blockers',
+	'QUICK_ADS_DENY_ADSBLOCKER_MSG1'	=> 'Please turn your Ads Blocker off to see post content',
+	'QUICK_ADS_DENY_ADSBLOCKER_MSG2'	=> 'Please enable the JavaScript to see post content',
 	'QUICK_ADS_ZINDEX'					=> 'خاصية Z-Index ( عدد صحيح )',
 	'QUICK_ADS_ZINDEX_EXPLAIN'			=> 'وضع الإعلان "خلف" أو "أعلى" عنصر آخر.',
 	'QUICK_ADS_CLOSEBT'					=> 'عرض زر الإغلاق ',

@@ -84,19 +84,17 @@ class main_module
 				}
 			
 				$this->config->set('quick_ads_allow_bot', $this->request->variable('quick_ads_allow_bot', 0));
-				
-				if ($this->request->variable('quick_ads_custom_id', '') == '')
+				$this->config->set('quick_ads_zindex', $this->request->variable('quick_ads_zindex', 100));
+				$this->config->set('quick_ads_closebt', $this->request->variable('quick_ads_closebt', 1));
+				$this->config->set('quick_ads_deny_adsblocker', $this->request->variable('quick_ads_deny_adsblocker', 0));
+				if ($this->config['quick_ads_deny_adsblocker'] == 1)
 				{
-					$this->config->set('quick_ads_custom_id', 'quick_ads_');
+					$this->config->set('quick_ads_cookie', 0);
 				}
 				else
 				{
-					$this->config->set('quick_ads_custom_id', $this->request->variable('quick_ads_custom_id', ''));
+					$this->config->set('quick_ads_cookie', $this->request->variable('quick_ads_cookie', 0));
 				}
-				
-				$this->config->set('quick_ads_zindex', $this->request->variable('quick_ads_zindex', 100));
-				$this->config->set('quick_ads_closebt', $this->request->variable('quick_ads_closebt', 1));
-				$this->config->set('quick_ads_cookie', $this->request->variable('quick_ads_cookie', 0));
 				
 				$this->config->set('quick_ads_cookie_time', ($this->request->variable('quick_ads_cookie_time', 0) < 0) ? 0 : $this->request->variable('quick_ads_cookie_time', 0));
 				$this->config->set('quick_ads_wmin_left', ($this->request->variable('quick_ads_wmin_left', 0) < 0) ? 0 : $this->request->variable('quick_ads_wmin_left', 0));
@@ -293,22 +291,22 @@ class main_module
 		if ($mode == 'quick_ads_config')
 		{
 			$this->template->assign_vars(array(
-				'S_QUICK_ADS_ACP_INDEX'		=> true,
-				'S_QUICK_ADS_ALLOW_BOT'		=> isset($this->config['quick_ads_allow_bot']) ? $this->config['quick_ads_allow_bot'] : false,
-				'S_QUICK_ADS_CUSTOM_ID'		=> isset($this->config['quick_ads_custom_id']) ? $this->config['quick_ads_custom_id'] : '',
-				'S_QUICK_ADS_ZINDEX'		=> isset($this->config['quick_ads_zindex']) ? $this->config['quick_ads_zindex'] : 0,
-				'S_QUICK_ADS_CLOSEBT'		=> isset($this->config['quick_ads_closebt']) ? $this->config['quick_ads_closebt'] : 1,
-				'S_QUICK_ADS_COOKIE'		=> isset($this->config['quick_ads_cookie']) ? $this->config['quick_ads_cookie'] : 0,
-				'S_QUICK_ADS_COOKIE_TIME'	=> isset($this->config['quick_ads_cookie_time']) ? $this->config['quick_ads_cookie_time'] : 0,
+				'S_QUICK_ADS_ACP_INDEX'				=> true,
+				'S_QUICK_ADS_ALLOW_BOT'				=> isset($this->config['quick_ads_allow_bot']) ? $this->config['quick_ads_allow_bot'] : false,
+				'S_QUICK_ADS_DENY_ADSBLOCKER'		=> isset($this->config['quick_ads_deny_adsblocker']) ? $this->config['quick_ads_deny_adsblocker'] : 0,
+				'S_QUICK_ADS_ZINDEX'				=> isset($this->config['quick_ads_zindex']) ? $this->config['quick_ads_zindex'] : 0,
+				'S_QUICK_ADS_CLOSEBT'				=> isset($this->config['quick_ads_closebt']) ? $this->config['quick_ads_closebt'] : 1,
+				'S_QUICK_ADS_COOKIE'				=> isset($this->config['quick_ads_cookie']) ? $this->config['quick_ads_cookie'] : 0,
+				'S_QUICK_ADS_COOKIE_TIME'			=> isset($this->config['quick_ads_cookie_time']) ? $this->config['quick_ads_cookie_time'] : 0,
 				
-				'S_QUICK_ADS_WMIN_LEFT'		=> isset($this->config['quick_ads_wmin_left']) ? $this->config['quick_ads_wmin_left'] : 0,
-				'S_QUICK_ADS_HMIN_LEFT'		=> isset($this->config['quick_ads_hmin_left']) ? $this->config['quick_ads_hmin_left'] : 0,
-				'S_QUICK_ADS_WMIN_RIGHT'	=> isset($this->config['quick_ads_wmin_right']) ? $this->config['quick_ads_wmin_right'] : 0,
-				'S_QUICK_ADS_HMIN_RIGHT'	=> isset($this->config['quick_ads_hmin_right']) ? $this->config['quick_ads_hmin_right'] : 0,
-				'S_QUICK_ADS_WMIN_TOP'		=> isset($this->config['quick_ads_wmin_top']) ? $this->config['quick_ads_wmin_top'] : 0,
-				'S_QUICK_ADS_HMIN_TOP'		=> isset($this->config['quick_ads_hmin_top']) ? $this->config['quick_ads_hmin_top'] : 0,
-				'S_QUICK_ADS_WMIN_BOTTOM'	=> isset($this->config['quick_ads_wmin_bottom']) ? $this->config['quick_ads_wmin_bottom'] : 0,
-				'S_QUICK_ADS_HMIN_BOTTOM'	=> isset($this->config['quick_ads_hmin_bottom']) ? $this->config['quick_ads_hmin_bottom'] : 0,
+				'S_QUICK_ADS_WMIN_LEFT'				=> isset($this->config['quick_ads_wmin_left']) ? $this->config['quick_ads_wmin_left'] : 0,
+				'S_QUICK_ADS_HMIN_LEFT'				=> isset($this->config['quick_ads_hmin_left']) ? $this->config['quick_ads_hmin_left'] : 0,
+				'S_QUICK_ADS_WMIN_RIGHT'			=> isset($this->config['quick_ads_wmin_right']) ? $this->config['quick_ads_wmin_right'] : 0,
+				'S_QUICK_ADS_HMIN_RIGHT'			=> isset($this->config['quick_ads_hmin_right']) ? $this->config['quick_ads_hmin_right'] : 0,
+				'S_QUICK_ADS_WMIN_TOP'				=> isset($this->config['quick_ads_wmin_top']) ? $this->config['quick_ads_wmin_top'] : 0,
+				'S_QUICK_ADS_HMIN_TOP'				=> isset($this->config['quick_ads_hmin_top']) ? $this->config['quick_ads_hmin_top'] : 0,
+				'S_QUICK_ADS_WMIN_BOTTOM'			=> isset($this->config['quick_ads_wmin_bottom']) ? $this->config['quick_ads_wmin_bottom'] : 0,
+				'S_QUICK_ADS_HMIN_BOTTOM'			=> isset($this->config['quick_ads_hmin_bottom']) ? $this->config['quick_ads_hmin_bottom'] : 0,
 				'S_QUICK_ADS_WMIN_TOP_STATIC'		=> isset($this->config['quick_ads_wmin_top_static']) ? $this->config['quick_ads_wmin_top_static'] : 0,
 				'S_QUICK_ADS_HMIN_TOP_STATIC'		=> isset($this->config['quick_ads_hmin_top_static']) ? $this->config['quick_ads_hmin_top_static'] : 0,
 				'S_QUICK_ADS_WMIN_BOTTOM_STATIC'	=> isset($this->config['quick_ads_wmin_bottom_static']) ? $this->config['quick_ads_wmin_bottom_static'] : 0,

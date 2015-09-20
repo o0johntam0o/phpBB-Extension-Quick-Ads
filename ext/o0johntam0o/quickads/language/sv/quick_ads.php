@@ -28,8 +28,10 @@ $lang = array_merge($lang, array(
 
 	'QUICK_ADS_ALLOW_BOT'				=> 'Tillåt botar',
 	'QUICK_ADS_ALLOW_BOT_EXPLAIN'		=> 'Aktivera kvickannonser för botar',
-	'QUICK_ADS_CUSTOM_ID'				=> 'Egen ID',
-	'QUICK_ADS_CUSTOM_ID_EXPLAIN'		=> 'Använd endast <em style="color:#ff0000">a-z</em>, <em style="color:#ff0000">0-9</em> och <em style="color:#ff0000">understreck</em> (lämna tomt för att använda standardvärden). Exempel: mitt_egna_id_123',
+	'QUICK_ADS_DENY_ADSBLOCKER'			=> 'Deny Ads Blockers',
+	'QUICK_ADS_DENY_ADSBLOCKER_EXPLAIN'	=> 'Prevent user from reading post with Ads Blockers',
+	'QUICK_ADS_DENY_ADSBLOCKER_MSG1'	=> 'Please turn your Ads Blocker off to see post content',
+	'QUICK_ADS_DENY_ADSBLOCKER_MSG2'	=> 'Please enable the JavaScript to see post content',
 	'QUICK_ADS_ZINDEX'					=> 'Z-Index (integer)',
 	'QUICK_ADS_ZINDEX_EXPLAIN'			=> 'Placera kvickannonser "bakom" eller "över" andra element',
 	'QUICK_ADS_CLOSEBT'					=> 'Visa stäng-knapp',

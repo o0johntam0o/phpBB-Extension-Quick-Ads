@@ -28,8 +28,10 @@ $lang = array_merge($lang, array(
 	
 	'QUICK_ADS_ALLOW_BOT'				=> 'Bots toestaan',
 	'QUICK_ADS_ALLOW_BOT_EXPLAIN'		=> 'Bots hebben toegang tot Advertenties',
-	'QUICK_ADS_CUSTOM_ID'				=> 'Gebruik ID',
-	'QUICK_ADS_CUSTOM_ID_EXPLAIN'		=> 'Gebruik <em style="color:#ff0000">a-z</em>, <em style="color:#ff0000">0-9</em> en <em style="color:#ff0000">underline</em> _ (laat leeg voor standaard instellingen).<br />Voorbeeld: mijn_1ste_advertentie',
+	'QUICK_ADS_DENY_ADSBLOCKER'			=> 'Deny Ads Blockers',
+	'QUICK_ADS_DENY_ADSBLOCKER_EXPLAIN'	=> 'Prevent user from reading post with Ads Blockers',
+	'QUICK_ADS_DENY_ADSBLOCKER_MSG1'	=> 'Please turn your Ads Blocker off to see post content',
+	'QUICK_ADS_DENY_ADSBLOCKER_MSG2'	=> 'Please enable the JavaScript to see post content',
 	'QUICK_ADS_ZINDEX'					=> 'Z-Index (Integer)',
 	'QUICK_ADS_ZINDEX_EXPLAIN'			=> 'Plaats Advertenties "achter" of "boven" een ander element',
 	'QUICK_ADS_CLOSEBT'					=> 'Laat X zien',

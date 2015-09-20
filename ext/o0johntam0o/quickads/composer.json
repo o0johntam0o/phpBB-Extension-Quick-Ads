@@ -17,6 +17,10 @@
 			"email": "o0johntam0o@gmail.com",
 			"homepage": "https://github.com/o0johntam0o",
 			"role": "Lead Developer"
+		},
+		{
+			"name": "Contributors",
+			"homepage": "https://github.com/o0johntam0o/phpBB-Extension-Quick-Ads/graphs/contributors"
 		}
 	],
 	"require": {

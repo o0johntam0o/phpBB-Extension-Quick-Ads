@@ -2,13 +2,13 @@ var tmp;
 
 jQuery(document).ready(function()
 {
-	quickAds_Scroll(quickAds_frameL, 'left');
-	quickAds_Scroll(quickAds_frameR, 'right');
-	quickAds_Scroll(quickAds_frameT, 'top');
-	quickAds_Scroll(quickAds_frameB, 'bottom');
+	quickAds_Scroll('#quick_ads_l', 'left');
+	quickAds_Scroll('#quick_ads_r', 'right');
+	quickAds_Scroll('#quick_ads_t', 'top');
+	quickAds_Scroll('#quick_ads_b', 'bottom');
 	quickAds_SetPos();
-	quickAds_Scroll_Marquee(quickAds_frameTS + ' > div > table');
-	quickAds_Scroll_Marquee(quickAds_frameBS + ' > div > table');
+	quickAds_Scroll_Marquee('#quick_ads_ts' + ' > div > table');
+	quickAds_Scroll_Marquee('#quick_ads_bs' + ' > div > table');
 });
 
 function quickAds_Scroll_Marquee(el)
@@ -31,44 +31,44 @@ function quickAds_SetPos()
 	var marginT = 0, marginB = 0;
 	tmp = jQuery(window).width();
 	
-	if (jQuery(quickAds_frameL).length > 0)
+	if (jQuery('#quick_ads_l').length > 0)
 	{
-		tmp = tmp - jQuery(quickAds_frameL).width();
+		tmp = tmp - jQuery('#quick_ads_l').width();
 	}
-	if (jQuery(quickAds_frameR).length > 0)
+	if (jQuery('#quick_ads_r').length > 0)
 	{
-		tmp = tmp - jQuery(quickAds_frameR).width();
+		tmp = tmp - jQuery('#quick_ads_r').width();
 	}
 	
 	tmp = tmp - 20;
 	
-	if (jQuery(quickAds_frameT).length > 0)
+	if (jQuery('#quick_ads_t').length > 0)
 	{
-		jQuery(quickAds_frameT).css({'max-width':tmp + 'px'});
-		marginT = Math.round((tmp - jQuery(quickAds_frameT).width()) / 2);
+		jQuery('#quick_ads_t').css({'max-width':tmp + 'px'});
+		marginT = Math.round((tmp - jQuery('#quick_ads_t').width()) / 2);
 	}
-	if (jQuery(quickAds_frameB).length > 0)
+	if (jQuery('#quick_ads_b').length > 0)
 	{
-		jQuery(quickAds_frameB).css({'max-width':tmp + 'px'});
-		marginB = Math.round((tmp - jQuery(quickAds_frameB).width()) / 2);
+		jQuery('#quick_ads_b').css({'max-width':tmp + 'px'});
+		marginB = Math.round((tmp - jQuery('#quick_ads_b').width()) / 2);
 	}
 	
-	if (jQuery(quickAds_frameL).length > 0)
+	if (jQuery('#quick_ads_l').length > 0)
 	{
-		tmp = jQuery(quickAds_frameL).width() + jQuery(window).scrollLeft() + 10;
+		tmp = jQuery('#quick_ads_l').width() + jQuery(window).scrollLeft() + 10;
 	}
 	else
 	{
 		tmp = jQuery(window).scrollLeft() + 10;
 	}
 	
-	if (jQuery(quickAds_frameT).length > 0)
+	if (jQuery('#quick_ads_t').length > 0)
 	{
-		jQuery(quickAds_frameT).css({'left':tmp + marginT + 'px'});
+		jQuery('#quick_ads_t').css({'left':tmp + marginT + 'px'});
 	}
-	if (jQuery(quickAds_frameB).length > 0)
+	if (jQuery('#quick_ads_b').length > 0)
 	{
-		jQuery(quickAds_frameB).css({'left':tmp + marginB + 'px'});
+		jQuery('#quick_ads_b').css({'left':tmp + marginB + 'px'});
 	}
 }
 

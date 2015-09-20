@@ -28,8 +28,10 @@ $lang = array_merge($lang, array(
 	
 	'QUICK_ADS_ALLOW_BOT'				=> 'Luba botid',
 	'QUICK_ADS_ALLOW_BOT_EXPLAIN'		=> 'Luba botid "Reklaamide süsteemis"',
-	'QUICK_ADS_CUSTOM_ID'				=> 'Kohandatud ID',
-	'QUICK_ADS_CUSTOM_ID_EXPLAIN'		=> 'Kasuta <em style="color:#ff0000">a-z</em>, <em style="color:#ff0000">0-9</em> ja <em style="color:#ff0000">allajoonitud</em> ainult (Jäta tühjaks, et kasutada vaikimisi väärtust). Näiteks: my_custom_id_123',
+	'QUICK_ADS_DENY_ADSBLOCKER'			=> 'Deny Ads Blockers',
+	'QUICK_ADS_DENY_ADSBLOCKER_EXPLAIN'	=> 'Prevent user from reading post with Ads Blockers',
+	'QUICK_ADS_DENY_ADSBLOCKER_MSG1'	=> 'Please turn your Ads Blocker off to see post content',
+	'QUICK_ADS_DENY_ADSBLOCKER_MSG2'	=> 'Please enable the JavaScript to see post content',
 	'QUICK_ADS_ZINDEX'					=> 'Z-Indeks (Täisarv)',
 	'QUICK_ADS_ZINDEX_EXPLAIN'			=> 'Aseta reklaamide süsteem teise elemendi "taha" või "üles"',
 	'QUICK_ADS_CLOSEBT'					=> 'Näita sulge nuppu',
