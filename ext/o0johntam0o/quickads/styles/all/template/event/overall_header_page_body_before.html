@@ -1,13 +1,40 @@
 <!-- IF (S_IS_BOT and S_QUICK_ADS_ALLOW_BOT) or not S_IS_BOT -->
-	<!-- IF S_VIEWTOPIC and S_QUICK_ADS_DENY_ADSBLOCKER -->
-		<!-- IF S_QUICK_ADS_TOTAL > 0 -->
-		<div class="panel" id="page_body_wrap_msg">
+<!-- IF S_QUICK_ADS_TOP_STATIC -->
+<div class="panel" id="quick_ads_ts" style="z-index:{S_QUICK_ADS_ZINDEX};">
+	<!-- IF S_QUICK_ADS_CLOSEBT == 1 -->
+	<div class="quickads_closebt" onclick="quickAds_Close('#quick_ads_ts', '#quick_ads_ts'<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
+	<!-- ENDIF -->
+	
+	<div class="inner" style="overflow: hidden;">
+		<table class="quickads_table" style="position: relative;">
+			<tbody>
+				<tr>
+					<!-- BEGIN quick_ads_row_top_static -->
+					<td valign="middle" class="quickads_items_border{quick_ads_row_top_static.QUICK_ADS_BORDER}">
+						<!-- IF S_QUICK_ADS_CLOSEBT == 2 -->
+						<div class="quickads_closebt" onclick="quickAds_Close('#quick_ads_i{quick_ads_row_top_static.QUICK_ADS_ID}', this.parentNode<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
+						<!-- ENDIF -->
+						
+						<div id="quick_ads_i{quick_ads_row_top_static.QUICK_ADS_ID}" class="quickads_items quickads_items_top_static" style="background-color: {quick_ads_row_top_static.QUICK_ADS_BG_COLOR}; overflow: {quick_ads_row_top_static.QUICK_ADS_OVERF}; <!-- IF quick_ads_row_top_static.QUICK_ADS_BG_IMG != '' -->background-image: url('{quick_ads_row_top_static.QUICK_ADS_BG_IMG}'); <!-- ENDIF -->width: <!-- IF quick_ads_row_top_static.QUICK_ADS_WIDTH > 0 -->{quick_ads_row_top_static.QUICK_ADS_WIDTH}px<!-- ELSE -->auto<!-- ENDIF -->; <!-- IF quick_ads_row_top_static.QUICK_ADS_HEIGHT > 0 -->height: {quick_ads_row_top_static.QUICK_ADS_HEIGHT}px<!-- ELSE -->auto<!-- ENDIF -->;"<!-- IF quick_ads_row_top_static.QUICK_ADS_HREF != '' --> onclick="window.open('{quick_ads_row_top_static.QUICK_ADS_HREF}'); return false;"<!-- ENDIF -->>
+							{quick_ads_row_top_static.QUICK_ADS_TEXT}
+						</div>
+					</td>
+					<!-- END quick_ads_row_top_static -->
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- ENDIF -->
+<!-- IF S_QUICK_ADS_DENY_ADSBLOCKER -->
+	<!-- IF S_QUICK_ADS_TOP or S_QUICK_ADS_BOTTOM or S_QUICK_ADS_LEFT or S_QUICK_ADS_RIGHT or S_QUICK_ADS_TOP_STATIC or S_QUICK_ADS_BOTTOM_STATIC -->
+	<noscript>
+		<div class="panel">
 			<div class="inner">
-				<strong style="color: red;"><span style="font-size: larger;">{L_QUICK_ADS_DENY_ADSBLOCKER_MSG1}</span></strong>
+				<strong style="color: red;"><span style="font-size: larger;">{L_QUICK_ADS_DENY_ADSBLOCKER_MSG2}</span></strong>
 			</div>
 		</div>
-		
-		<div id="page_body_wrap" style="display: none;">
-		<!-- ENDIF -->
+	</noscript>
 	<!-- ENDIF -->
+<!-- ENDIF -->
 <!-- ENDIF -->
