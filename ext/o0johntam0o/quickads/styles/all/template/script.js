@@ -9,6 +9,8 @@ jQuery(document).ready(function()
 	quickAds_SetPos();
 	quickAds_Scroll_Marquee('#quick_ads_ts' + ' > div > table');
 	quickAds_Scroll_Marquee('#quick_ads_bs' + ' > div > table');
+	// Force scroll page to top 1px to make events works.
+	jQuery(window).scrollTop(jQuery(window).scrollTop() + 1);
 });
 
 function quickAds_Scroll_Marquee(el)
